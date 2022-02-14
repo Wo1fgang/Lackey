@@ -1,9 +1,15 @@
+import time
 from NewDocument import CrtNewDoc
 from Insert_Tab import InsertTab
 from Insert_Table import Insert_Table
 from Insert_URL_Image import Insert_URL_Image
 from Insert_Local_Image import Insert_Local_Image
 import pyautogui
+import os
+
+os.startfile("C:\\Program Files\\ONLYOFFICE\\DesktopEditors\\DesktopEditors.exe")
+
+time.sleep(7)
 
 CrtNewDoc()
 
