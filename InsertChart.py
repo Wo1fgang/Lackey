@@ -231,3 +231,8 @@ Buttons.down()
 Buttons.down()
 Buttons.down()
 enterChart()
+
+# if (pyautogui.locateOnScreen('Pattern\\Charts\\9Two.png', confidence=0.9, grayscale=True)) is None:
+#     pyautogui.screenshot(f'Completed Tests\\Failed\\Chart\\{date}.png')
+#     f = open('Completed Tests\\Tests.txt', 'a')
+#     f.write(f"{date} - There's a problem with ninth two charts \n")
