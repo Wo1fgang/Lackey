@@ -23,3 +23,6 @@ def enter():
 
 def tab():
     pyautogui.press('Tab')
+
+def escape():
+    pyautogui.press('Escape')
