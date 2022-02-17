@@ -57,7 +57,7 @@ if (pyautogui.locateOnScreen('Pattern\\Charts\\1Two.png', confidence=0.9, graysc
 
 Buttons.enter()
 Buttons.enter()
-pyautogui.press('First two')
+pyautogui.typewrite('1')
 
 chart()
 Buttons.down()
@@ -81,7 +81,7 @@ if (pyautogui.locateOnScreen('Pattern\\Charts\\2Two.png', confidence=0.9, graysc
 
 Buttons.enter()
 Buttons.enter()
-pyautogui.press('Second two')
+pyautogui.press('2')
 
 chart()
 Buttons.down()
@@ -104,7 +104,7 @@ if (pyautogui.locateOnScreen('Pattern\\Charts\\3Two.png', confidence=0.9, graysc
 
 Buttons.enter()
 Buttons.enter()
-pyautogui.press('Third two')
+pyautogui.press('3')
 
 chart()
 Buttons.down()
@@ -123,7 +123,7 @@ if (pyautogui.locateOnScreen('Pattern\\Charts\\4Two.png', confidence=0.9, graysc
 
 Buttons.enter()
 Buttons.enter()
-pyautogui.press('Fourth two')
+pyautogui.press('4')
 
 chart()
 Buttons.down()
@@ -145,7 +145,7 @@ if (pyautogui.locateOnScreen('Pattern\\Charts\\5Two.png', confidence=0.9, graysc
 
 Buttons.enter()
 Buttons.enter()
-pyautogui.press('Fifth two')
+pyautogui.press('5')
 
 chart()
 Buttons.down()
@@ -171,7 +171,7 @@ if (pyautogui.locateOnScreen('Pattern\\Charts\\6Two.png', confidence=0.9, graysc
 
 Buttons.enter()
 Buttons.enter()
-pyautogui.press('Sixth two')
+pyautogui.press('6')
 
 chart()
 Buttons.down()
@@ -193,7 +193,7 @@ if (pyautogui.locateOnScreen('Pattern\\Charts\\7Two.png', confidence=0.9, graysc
 
 Buttons.enter()
 Buttons.enter()
-pyautogui.press('Seventh two')
+pyautogui.press('7')
 
 chart()
 Buttons.down()
@@ -215,7 +215,7 @@ if (pyautogui.locateOnScreen('Pattern\\Charts\\8Two.png', confidence=0.9, graysc
 
 Buttons.enter()
 Buttons.enter()
-pyautogui.press('Eighth two')
+pyautogui.press('8')
 
 chart()
 Buttons.down()
