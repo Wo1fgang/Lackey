@@ -1,5 +1,4 @@
 import pyautogui
-import os.path
 
 pyautogui.PAUSE = 0.5
 
