@@ -2,7 +2,6 @@ import pyautogui
 import time
 import os.path
 import pyperclip
-from datetime import datetime
 from NewDocument import CrtNewDoc
 from Insert_Tab import InsertTab
 import Buttons
@@ -10,9 +9,10 @@ from datetime import datetime
 
 date = datetime.now().strftime("%d.%m.%Y %H.%M.%S")
 
-# os.startfile("C:\\Program Files\\ONLYOFFICE\\DesktopEditors\\DesktopEditors.exe")
-#
-# time.sleep(7)
+os.startfile("C:\\Program Files\\ONLYOFFICE\\DesktopEditors\\DesktopEditors.exe")
+
+time.sleep(7)
+
 
 def next():
     Buttons.escape()
@@ -30,16 +30,16 @@ def enterChart():
 def chart():
     pyautogui.click(pyautogui.locateOnScreen('Pattern\\Chart.png', confidence=0.9, grayscale=True))
 
+
 pyautogui.PAUSE = 0.5
 
-#CrtNewDoc()
+CrtNewDoc()
 
 InsertTab()
 
 chart()
 Buttons.down()
 enterChart()
-
 
 chart()
 Buttons.down()
@@ -56,7 +56,7 @@ if (pyautogui.locateOnScreen('Pattern\\Charts\\1Two.png', confidence=0.8, graysc
 
 Buttons.enter()
 Buttons.enter()
-pyautogui.typewrite('1')
+pyautogui.press('1')
 Buttons.enter()
 
 chart()
@@ -257,7 +257,7 @@ Buttons.enter()
 pyautogui.press('9')
 Buttons.enter()
 
-#______________________
+# ______________________
 
 chart()
 Buttons.down()
@@ -288,7 +288,7 @@ pyautogui.press('1')
 pyautogui.press('0')
 Buttons.enter()
 
-#____________
+# ____________
 
 chart()
 Buttons.down()
@@ -321,7 +321,7 @@ pyautogui.press('1')
 pyautogui.press('1')
 Buttons.enter()
 
-#____________
+# ____________
 
 chart()
 Buttons.down()
@@ -351,7 +351,7 @@ pyautogui.press('1')
 pyautogui.press('2')
 Buttons.enter()
 
-#____________
+# ____________
 
 chart()
 Buttons.down()
@@ -384,7 +384,7 @@ pyautogui.press('1')
 pyautogui.press('3')
 Buttons.enter()
 
-#_________________________
+# _________________________
 
 chart()
 Buttons.down()
@@ -452,7 +452,7 @@ pyautogui.press('1')
 pyautogui.press('5')
 Buttons.enter()
 
-#___________
+# ___________
 
 chart()
 pyautogui.click(pyautogui.locateOnScreen('Pattern\\Charts\\scatter.png', confidence=0.9, grayscale=True))
@@ -480,7 +480,7 @@ pyautogui.press('1')
 pyautogui.press('6')
 Buttons.enter()
 
-#__________
+# __________
 
 chart()
 Buttons.up()
@@ -505,7 +505,7 @@ pyautogui.press('1')
 pyautogui.press('7')
 Buttons.enter()
 
-#_________________
+# _________________
 
 chart()
 Buttons.up()
