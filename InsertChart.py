@@ -11,7 +11,7 @@ date = datetime.now().strftime("%d.%m.%Y %H.%M.%S")
 
 os.startfile("C:\\Program Files\\ONLYOFFICE\\DesktopEditors\\DesktopEditors.exe")
 
-time.sleep(7)
+#time.sleep(7)
 
 
 def next():
