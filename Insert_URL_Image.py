@@ -3,8 +3,9 @@ import pyperclip
 from Insert_Tab import InsertTab
 from datetime import datetime
 import Buttons
+import time
 
-pyautogui.PAUSE = 0.5
+pyautogui.PAUSE = 0.8
 
 # CrtNewDoc()
 

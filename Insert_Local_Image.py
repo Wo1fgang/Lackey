@@ -6,7 +6,7 @@ from datetime import datetime
 from Insert_Tab import InsertTab
 import Buttons
 
-pyautogui.PAUSE = 0.5
+pyautogui.PAUSE = 0.8
 
 
 def Insert_Local_Image():
@@ -14,9 +14,7 @@ def Insert_Local_Image():
 
     # Local - Insert tab + Insert Local Image
     def local():
-        pyautogui.click(
-            pyautogui.locateOnScreen('Pattern\\Insert.png', confidence=0.9, grayscale=True))  # Click on Insert
-        time.sleep(0.5)
+        InsertTab()
 
         # INSERTING LOCAL IMAGE
         pyautogui.click(pyautogui.locateOnScreen('Pattern\\Image.png', confidence=0.9, grayscale=True))

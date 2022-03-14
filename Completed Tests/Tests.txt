@@ -1,0 +1,22 @@
+22.02.2022 15.03.15 - There's a problem with first two charts 
+22.02.2022 16.05.39 - There's a problem with second two charts 
+22.02.2022 16.06.59 - 9x9 Table inserted successfully 
+14.03.2022 15.21.18 - 9x9 Table inserted successfully 
+14.03.2022 15.21.24 - There's a problem with inserting image from URL 
+14.03.2022 15.23.26 - 9x9 Table inserted successfully 
+14.03.2022 15.26.14 - URL Image inserted successfully 
+14.03.2022 15.26.57 - 9x9 Table inserted successfully 
+14.03.2022 15.29.38 - 9x9 Table inserted successfully 
+14.03.2022 15.30.26 - 9x9 Table inserted successfully 
+14.03.2022 15.31.00 - 9x9 Table inserted successfully 
+14.03.2022 15.31.07 - There's a problem with inserting image from URL 
+14.03.2022 15.39.30 - 9x9 Table inserted successfully 
+14.03.2022 15.41.56 - 9x9 Table inserted successfully 
+14.03.2022 15.42.48 - 9x9 Table inserted successfully 
+14.03.2022 15.52.13 - 9x9 Table inserted successfully 
+14.03.2022 15.52.24 - URL Image inserted successfully 
+14.03.2022 15.54.10 - 9x9 Table inserted successfully 
+14.03.2022 15.54.16 - URL Image inserted successfully 
+14.03.2022 16.09.10 - 9x9 Table inserted successfully 
+14.03.2022 16.09.19 - URL Image inserted successfully 
+14.03.2022 16.10.08 - Local Image inserted successfully 
