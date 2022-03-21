@@ -1,24 +1,53 @@
-import pyautogui  # Импортируем pyautogui, главная библиотека которая используется для взаимодействия с интерфейсом
-import time  # Импортируем библиотеки time, она нужна для команды time.sleep
+import pyautogui
+import time
 
-pyautogui.PAUSE = 0.5  # Устанавливаем паузу в полсекунды при любом обращении к pyautogui, нужно на всякий случай
-# когда интерфейс редактора не успевает прогрузиться
+pyautogui.PAUSE = 0.5
 
 
-def CrtNewDoc():  # описываем функцию CrtNewDoc
-    if (pyautogui.locateOnScreen('Pattern\\New Document.jpg', confidence=0.9,
-                                 grayscale=True)) is None:  # если скрипт не может найти кнопку "Создать новый документ"
+def CrtNewDoc():
+    if (pyautogui.locateOnScreen('Pattern\\NewDocument.png', confidence=0.9,
+                                 grayscale=True)) is None:
         pyautogui.click(
             pyautogui.locateOnScreen('Pattern\\MainMenu.png', confidence=0.9,
-                                     grayscale=True))  # То он кликает на кнопку чтобы перейти в главное меню
-        pyautogui.click(pyautogui.locateOnScreen('Pattern\\New Document.jpg', confidence=0.9,
-                                                 grayscale=True))  # и создает новый документ
+                                     grayscale=True))
+        pyautogui.click(pyautogui.locateOnScreen('Pattern\\NewDocument.png', confidence=0.9,
+                                                 grayscale=True))
     else:
         pyautogui.click(
-            pyautogui.locateOnScreen('Pattern\\New Document.jpg', confidence=0.9,
-                                     grayscale=True))  # если он уже в главном меню, создает новый документ
-    time.sleep(4)  # Ждет 4 секунды чтобы документ успел прогрузиться
+            pyautogui.locateOnScreen('Pattern\\NewDocument.png', confidence=0.9,
+                                     grayscale=True))
+    time.sleep(4)
+
+
+def CrtNewSpreadsheet():
+    if (pyautogui.locateOnScreen('Pattern\\NewSpreadsheet.png', confidence=0.9,
+                                 grayscale=True)) is None:
+        pyautogui.click(
+            pyautogui.locateOnScreen('Pattern\\MainMenu.png', confidence=0.9,
+                                     grayscale=True))
+        pyautogui.click(pyautogui.locateOnScreen('Pattern\\NewSpreadsheet.png', confidence=0.9,
+                                                 grayscale=True))
+    else:
+        pyautogui.click(
+            pyautogui.locateOnScreen('Pattern\\NewSpreadsheet.png', confidence=0.9,
+                                     grayscale=True))
+    time.sleep(4)
+
+
+def CrtNewPresentation():
+    if (pyautogui.locateOnScreen('Pattern\\NewPresentation.png', confidence=0.9,
+                                 grayscale=True)) is None:
+        pyautogui.click(
+            pyautogui.locateOnScreen('Pattern\\MainMenu.png', confidence=0.9,
+                                     grayscale=True))
+        pyautogui.click(pyautogui.locateOnScreen('Pattern\\NewPresentation.png', confidence=0.9,
+                                                 grayscale=True))
+    else:
+        pyautogui.click(
+            pyautogui.locateOnScreen('Pattern\\NewPresentation.png', confidence=0.9,
+                                     grayscale=True))
+    time.sleep(4)
 
 
 if __name__ == "__main__":
-    CrtNewDoc()  # fail-safe чтобы скрипт не вызывался когда его импортируют
+    CrtNewDoc()

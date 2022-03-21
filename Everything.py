@@ -7,7 +7,7 @@ from Insert_Local_Image import Insert_Local_Image #All above: importing scripts 
 import pyautogui # Main library to interact with UI
 import os # Library used to launch desktop
 
-os.startfile("C:\\Program Files\\ONLYOFFICE\\DesktopEditors\\DesktopEditors.exe") #Запускаем редактор
+os.startfile("C:\\Program Files\\ONLYOFFICE\\DesktopEditors\\DesktopEditors.exe") # Launching desktopeditor
 
 time.sleep(8) # Wait 8 seconds
 
