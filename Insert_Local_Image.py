@@ -1,7 +1,7 @@
 import pyautogui
 import time
 import os.path
-import pyperclip # Библотека которая позволяет взаимодействовать с буфером обмена
+import pyperclip # Library for copypasting stuff
 from datetime import datetime
 from Insert_Tab import InsertTab
 import Buttons

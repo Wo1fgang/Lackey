@@ -1,25 +1,25 @@
-import time #Библиотека используется для приостановки выполнения скрипта (12 строка)
-from NewDocument import CrtNewDoc #Импортируем функцию CrtNewDoc из скрипта NewDocument
-from Insert_Tab import InsertTab #Аналогично вышенаписанному
-from Insert_Table import Insert_Table #Аналогично вышенаписанному
-from Insert_URL_Image import Insert_URL_Image #Аналогично вышенаписанному
-from Insert_Local_Image import Insert_Local_Image #Аналогично вышенаписанному
-import pyautogui #Импортируем pyautogui, главная библиотека которая используется для взаимодействия с интерфейсом
-import os #Библиотека для взаимодействия с операционной системой, в данном случае - для запуска редактора (10 строка)
+import time # Used for time.sleep command, to "pause" execution of code
+from NewDocument import CrtNewDoc
+from Insert_Tab import InsertTab
+from Insert_Table import Insert_Table
+from Insert_URL_Image import Insert_URL_Image
+from Insert_Local_Image import Insert_Local_Image #All above: importing scripts to run from this one script
+import pyautogui # Main library to interact with UI
+import os # Library used to launch desktop
 
 os.startfile("C:\\Program Files\\ONLYOFFICE\\DesktopEditors\\DesktopEditors.exe") #Запускаем редактор
 
-time.sleep(1) #Даем команду подождать 7 секунд
+time.sleep(8) # Wait 8 seconds
 
-CrtNewDoc() #Создаем новый документ
+CrtNewDoc() # Creating new document
 
-InsertTab() #Переходим на вкладку Insert
+InsertTab() # Click on "Insert" tab
 
-Insert_Table() #Вставляем таблицу 9х9
+Insert_Table() # Inserting 9x9 table
 
-Insert_URL_Image() #Вставляем изображение по URL
+Insert_URL_Image() # Inserting image from URL
 
-Insert_Local_Image() #Вставляем локальное изображение
+Insert_Local_Image() # Inserting local images
 
 
-pyautogui.alert('Тест закончен') #Показываем сообщение что текст закончен (опционально, можно закомментить)
+pyautogui.alert('Тест закончен. Результаты можно посмотреть в C:\Lackey\Completed Tests\Tests.txt') # Message that test is done
