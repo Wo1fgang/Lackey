@@ -31,35 +31,30 @@ def Insert_Local_Image():
         # pyautogui.press('Enter')  # Next Line
 
     local()
+    pyautogui.click(pyautogui.locateOnScreen('Pattern\\FileName.png', confidence=0.9, grayscale=True))
+    pyperclip.copy('C:\Auto\Images\small images\JPG.jpg')
+    ii()
+
+    local()
     # Change directory in explorer
-    pyautogui.click(pyautogui.locateOnScreen('Pattern\\QuickAccess.png', confidence=0.9, grayscale=True))
-    pyautogui.click(pyautogui.locateOnScreen('Pattern\\AddressBar.png', confidence=0.9, grayscale=True))
-    pyperclip.copy('C:\Auto\Images\small images')
-    pyautogui.hotkey('Ctrl', 'v')
-    Buttons.enter()
-
+    #pyautogui.click(pyautogui.locateOnScreen('Pattern\\QuickAccess.png', confidence=0.9, grayscale=True))
     pyautogui.click(pyautogui.locateOnScreen('Pattern\\FileName.png', confidence=0.9, grayscale=True))
-    pyperclip.copy('jpg.jpg')
+    pyperclip.copy('C:\Auto\Images\small images\BMP.bmp')
     ii()
 
     local()
     pyautogui.click(pyautogui.locateOnScreen('Pattern\\FileName.png', confidence=0.9, grayscale=True))
-    pyperclip.copy('png.png')
+    pyperclip.copy('C:\Auto\Images\small images\PNG.png')
     ii()
 
     local()
     pyautogui.click(pyautogui.locateOnScreen('Pattern\\FileName.png', confidence=0.9, grayscale=True))
-    pyperclip.copy('tiff.tiff')
+    pyperclip.copy('C:\Auto\Images\small images\TIFF.tiff')
     ii()
 
     local()
     pyautogui.click(pyautogui.locateOnScreen('Pattern\\FileName.png', confidence=0.9, grayscale=True))
-    pyperclip.copy('bmp.bmp')
-    ii()
-
-    local()
-    pyautogui.click(pyautogui.locateOnScreen('Pattern\\FileName.png', confidence=0.9, grayscale=True))
-    pyperclip.copy('gif.gif')
+    pyperclip.copy('C:\Auto\Images\small images\GIF.gif')
     ii()
 
     date = datetime.now().strftime("%d.%m.%Y %H.%M.%S")

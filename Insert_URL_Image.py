@@ -17,7 +17,7 @@ def Insert_URL_Image():
     Buttons.down()
     Buttons.down()  # Choosing insert from URL
     Buttons.enter()  # OK
-    pyperclip.copy('https://pbs.twimg.com/media/FI46f4eXwAMcKW-?format=jpg&name=medium')
+    pyperclip.copy('https://i.redd.it/or438ov4zno81.jpg')
     pyautogui.hotkey('Ctrl', 'v')  # Insert Image URL
     Buttons.enter()
     if (pyautogui.locateOnScreen('Pattern\\ErrorURL.png', confidence=0.8)) is None:
@@ -25,7 +25,7 @@ def Insert_URL_Image():
     else:
         pyautogui.hotkey('ctrl', 'a')
         pyautogui.hotkey('alt', 'shift')
-        pyautogui.typewrite('https://pbs.twimg.com/media/FI46f4eXwAMcKW-?format=jpg&name=medium')
+        pyautogui.typewrite('https://i.redd.it/or438ov4zno81.jpg')
     Buttons.right()
     Buttons.enter()  # Next Line
 
