@@ -28,8 +28,10 @@ def enterChart():
 
 
 def chart():
-    pyautogui.click(pyautogui.locateOnScreen('Pattern\\Chart.png', confidence=0.9, grayscale=True))
-
+    # pyautogui.click(pyautogui.locateOnScreen('Pattern\\Chart.png', confidence=0.9, grayscale=True))
+    pyautogui.press('alt')
+    pyautogui.press('i')
+    pyautogui.press('f')
 
 pyautogui.PAUSE = 0.5
 

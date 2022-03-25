@@ -30,3 +30,11 @@
 21.03.2022 22.33.00 - Everything's alright win document at 200% interface scaling 
 21.03.2022 22.33.00 - Everything's alright win Spreadsheet at 200% interface scaling 
 21.03.2022 22.33.00 - Everything's alright win Presentation at 200% interface scaling 
+25.03.2022 17.37.35 - There's a problem with inserting table 
+25.03.2022 17.38.06 - 9x9 Table inserted successfully 
+25.03.2022 17.45.13 - URL Image inserted successfully 
+25.03.2022 18.20.47 - 9x9 Table inserted successfully 
+25.03.2022 18.20.57 - URL Image inserted successfully 
+25.03.2022 18.37.59 - Local Image inserted successfully 
+25.03.2022 18.38.55 - 9x9 Table inserted successfully 
+25.03.2022 18.39.05 - URL Image inserted successfully 

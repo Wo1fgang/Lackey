@@ -1,23 +1,25 @@
 import pyautogui
 import time
 import os.path
-import pyperclip # Library for copypasting stuff
+import pyperclip  # Library for copypasting stuff
 from datetime import datetime
 from Insert_Tab import InsertTab
 import Buttons
 
-pyautogui.PAUSE = 0.8
+pyautogui.PAUSE = 0.7
+
+time.sleep(2)
 
 
 def Insert_Local_Image():
-    InsertTab()
-
     # Local - Insert tab + Insert Local Image
     def local():
-        InsertTab()
-
+        # InsertTab()
         # INSERTING LOCAL IMAGE
-        pyautogui.click(pyautogui.locateOnScreen('Pattern\\Image.png', confidence=0.9, grayscale=True))
+        # pyautogui.click(pyautogui.locateOnScreen('Pattern\\Image.png', confidence=0.9, grayscale=True))
+        pyautogui.press('alt')
+        pyautogui.press('i')
+        pyautogui.press('e')
         Buttons.down()  # Choosing insert local image
         Buttons.enter()  # OK
         time.sleep(1)
@@ -26,34 +28,34 @@ def Insert_Local_Image():
     def ii():
         pyautogui.hotkey('Ctrl', 'v')
         Buttons.enter()
-        pyautogui.press('Escape')  # Escape from active image
+        Buttons.escape()  # Escape from active image
         Buttons.right()
         # pyautogui.press('Enter')  # Next Line
 
     local()
-    pyautogui.click(pyautogui.locateOnScreen('Pattern\\FileName.png', confidence=0.9, grayscale=True))
+    # pyautogui.click(pyautogui.locateOnScreen('Pattern\\FileName.png', confidence=0.9, grayscale=True))
     pyperclip.copy('C:\Auto\Images\small images\JPG.jpg')
     ii()
 
     local()
     # Change directory in explorer
-    #pyautogui.click(pyautogui.locateOnScreen('Pattern\\QuickAccess.png', confidence=0.9, grayscale=True))
-    pyautogui.click(pyautogui.locateOnScreen('Pattern\\FileName.png', confidence=0.9, grayscale=True))
+    # pyautogui.click(pyautogui.locateOnScreen('Pattern\\QuickAccess.png', confidence=0.9, grayscale=True))
+    #pyautogui.click(pyautogui.locateOnScreen('Pattern\\FileName.png', confidence=0.9, grayscale=True))
     pyperclip.copy('C:\Auto\Images\small images\BMP.bmp')
     ii()
 
     local()
-    pyautogui.click(pyautogui.locateOnScreen('Pattern\\FileName.png', confidence=0.9, grayscale=True))
+    #pyautogui.click(pyautogui.locateOnScreen('Pattern\\FileName.png', confidence=0.9, grayscale=True))
     pyperclip.copy('C:\Auto\Images\small images\PNG.png')
     ii()
 
     local()
-    pyautogui.click(pyautogui.locateOnScreen('Pattern\\FileName.png', confidence=0.9, grayscale=True))
+    #pyautogui.click(pyautogui.locateOnScreen('Pattern\\FileName.png', confidence=0.9, grayscale=True))
     pyperclip.copy('C:\Auto\Images\small images\TIFF.tiff')
     ii()
 
     local()
-    pyautogui.click(pyautogui.locateOnScreen('Pattern\\FileName.png', confidence=0.9, grayscale=True))
+    #pyautogui.click(pyautogui.locateOnScreen('Pattern\\FileName.png', confidence=0.9, grayscale=True))
     pyperclip.copy('C:\Auto\Images\small images\GIF.gif')
     ii()
 

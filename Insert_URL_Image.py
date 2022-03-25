@@ -7,13 +7,17 @@ import time
 
 pyautogui.PAUSE = 0.8
 
+
 # CrtNewDoc()
 
 
 def Insert_URL_Image():
     InsertTab()
     # INSERTING IMAGE FROM URL:
-    pyautogui.click(pyautogui.locateOnScreen('Pattern\\Image.png', confidence=0.9, grayscale=True))
+    # pyautogui.click(pyautogui.locateOnScreen('Pattern\\Image.png', confidence=0.9, grayscale=True))
+    pyautogui.press('alt')
+    pyautogui.press('i')
+    pyautogui.press('e')
     Buttons.down()
     Buttons.down()  # Choosing insert from URL
     Buttons.enter()  # OK
@@ -39,6 +43,7 @@ def Insert_URL_Image():
         pyautogui.screenshot(f'Completed Tests\\Success\\Image\\URL\\{date}.png')
         f = open('Completed Tests\\Tests.txt', 'a')
         f.write(f"{date} - URL Image inserted successfully \n")
+
 
 if __name__ == "__main__":
     Insert_URL_Image()
