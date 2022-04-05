@@ -38,3 +38,14 @@
 25.03.2022 18.37.59 - Local Image inserted successfully 
 25.03.2022 18.38.55 - 9x9 Table inserted successfully 
 25.03.2022 18.39.05 - URL Image inserted successfully 
+03.04.2022 18.53.36 - There's a problem with belarusian language in presentation 
+03.04.2022 18.53.36 - There's a problem with Bulgarian language in presentation 
+03.04.2022 18.53.36 - There's a problem with Catalan language in presentation 
+03.04.2022 19.02.03 - There's a problem with belarusian language in presentation 
+03.04.2022 19.02.03 - There's a problem with Bulgarian language in presentation 
+03.04.2022 20.22.50 - There's a problem with German language in presentation 
+05.04.2022 13.53.26 - There's a problem with Danish language in presentation 
+05.04.2022 13.53.26 - There's a problem with French language in document 
+05.04.2022 13.53.26 - There's a problem with French language in presentation 
+05.04.2022 21.52.41 - There's a problem with Portuguese language in document 
+05.04.2022 21.52.41 - There's a problem with Portuguese language in presentation 
