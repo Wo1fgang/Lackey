@@ -34,7 +34,7 @@ def ChangeLang():
 # Checking Belarusian language
 if (pyautogui.locateOnScreen('Pattern\\Settings.png', confidence=0.9,
                              grayscale=True)) is None:
-    print('Change language to english')
+    print('You need to change language to english')
     sys.exit()
 else:
     pyautogui.click(pyautogui.locateOnScreen('Pattern\\Settings.png', confidence=0.9, grayscale=True))
@@ -62,7 +62,9 @@ if (pyautogui.locateOnScreen('Pattern\\\Languages\\Belarusian\\CrDoc.png', confi
     f.write(f"{date} - There's a problem with belarusian language in document \n")  # Write down that something's wrong
 else:
     print('Everything is alright with belarusian language in document')
+pyautogui.hotkey('Ctrl', 'w')
 pyautogui.click(pyautogui.locateOnScreen('Pattern\\MainMenu.png', confidence=0.9, grayscale=True))
+
 
 # Creating spreadsheet in belarusian
 NewSpreadsheet.CrtNewSpreadsheet()
@@ -74,7 +76,9 @@ if (pyautogui.locateOnScreen('Pattern\\\Languages\\Belarusian\\CrSpr.png', confi
         f"{date} - There's a problem with belarusian language in spreadsheet \n")  # Write down that something's wrong
 else:
     print('Everything is alright with belarusian language in spreadsheet')
+pyautogui.hotkey('Ctrl', 'w')
 pyautogui.click(pyautogui.locateOnScreen('Pattern\\MainMenu.png', confidence=0.9, grayscale=True))
+
 
 # Creating presentation in belarusian
 NewPresentation.CrtNewPresentation()
@@ -86,6 +90,7 @@ if (pyautogui.locateOnScreen('Pattern\\\Languages\\Belarusian\\CrPre.png', confi
         f"{date} - There's a problem with belarusian language in presentation \n")  # Write down that something's wrong
 else:
     print('Everything is alright with belarusian language in presentation')
+pyautogui.hotkey('Ctrl', 'w')
 pyautogui.click(pyautogui.locateOnScreen('Pattern\\MainMenu.png', confidence=0.9, grayscale=True))
 
 # Changing the language to Bulgarian
@@ -102,7 +107,9 @@ if (pyautogui.locateOnScreen('Pattern\\\Languages\\Bulgarian\\CrDoc.png', confid
     f.write(f"{date} - There's a problem with Bulgarian language in document \n")  # Write down that something's wrong
 else:
     print('Everything is alright with Bulgarian language in document')
+pyautogui.hotkey('Ctrl', 'w')
 pyautogui.click(pyautogui.locateOnScreen('Pattern\\MainMenu.png', confidence=0.9, grayscale=True))
+
 
 # Creating spreadsheet in Bulgarian
 NewSpreadsheet.CrtNewSpreadsheet()
@@ -114,6 +121,7 @@ if (pyautogui.locateOnScreen('Pattern\\\Languages\\Bulgarian\\CrSpr.png', confid
         f"{date} - There's a problem with Bulgarian language in spreadsheet \n")  # Write down that something's wrong
 else:
     print('Everything is alright with Bulgarian language in spreadsheet')
+pyautogui.hotkey('Ctrl', 'w')
 pyautogui.click(pyautogui.locateOnScreen('Pattern\\MainMenu.png', confidence=0.9, grayscale=True))
 
 # Creating presentation in Bulgarian
@@ -126,6 +134,7 @@ if (pyautogui.locateOnScreen('Pattern\\\Languages\\Bulgarian\\CrPre.png', confid
         f"{date} - There's a problem with Bulgarian language in presentation \n")  # Write down that something's wrong
 else:
     print('Everything is alright with Bulgarian language in presentation')
+pyautogui.hotkey('Ctrl', 'w')
 pyautogui.click(pyautogui.locateOnScreen('Pattern\\MainMenu.png', confidence=0.9, grayscale=True))
 
 # Changing the language to Catalan
@@ -142,6 +151,7 @@ if (pyautogui.locateOnScreen('Pattern\\\Languages\\Catalan\\CrDoc.png', confiden
     f.write(f"{date} - There's a problem with Catalan language in document \n")  # Write down that something's wrong
 else:
     print('Everything is alright with Catalan language in document')
+pyautogui.hotkey('Ctrl', 'w')
 pyautogui.click(pyautogui.locateOnScreen('Pattern\\MainMenu.png', confidence=0.9, grayscale=True))
 
 # Creating spreadsheet in Catalan
@@ -154,6 +164,7 @@ if (pyautogui.locateOnScreen('Pattern\\\Languages\\Catalan\\CrSpr.png', confiden
         f"{date} - There's a problem with Catalan language in spreadsheet \n")  # Write down that something's wrong
 else:
     print('Everything is alright with Catalan language in spreadsheet')
+pyautogui.hotkey('Ctrl', 'w')
 pyautogui.click(pyautogui.locateOnScreen('Pattern\\MainMenu.png', confidence=0.9, grayscale=True))
 
 # Creating presentation in Catalan
@@ -166,6 +177,7 @@ if (pyautogui.locateOnScreen('Pattern\\\Languages\\Catalan\\CrPre.png', confiden
         f"{date} - There's a problem with Catalan language in presentation \n")  # Write down that something's wrong
 else:
     print('Everything is alright with Catalan language in presentation')
+pyautogui.hotkey('Ctrl', 'w')
 pyautogui.click(pyautogui.locateOnScreen('Pattern\\MainMenu.png', confidence=0.9, grayscale=True))
 
 # Changing the language to Czech
@@ -181,6 +193,7 @@ if (pyautogui.locateOnScreen('Pattern\\\Languages\\Czech\\CrDoc.png', confidence
     f.write(f"{date} - There's a problem with Czech language in document \n")  # Write down that something's wrong
 else:
     print('Everything is alright with Czech language in document')
+pyautogui.hotkey('Ctrl', 'w')
 pyautogui.click(pyautogui.locateOnScreen('Pattern\\MainMenu.png', confidence=0.9, grayscale=True))
 
 # Creating spreadsheet in Czech
@@ -193,6 +206,7 @@ if (pyautogui.locateOnScreen('Pattern\\\Languages\\Czech\\CrSpr.png', confidence
         f"{date} - There's a problem with Czech language in spreadsheet \n")  # Write down that something's wrong
 else:
     print('Everything is alright with Czech language in spreadsheet')
+pyautogui.hotkey('Ctrl', 'w')
 pyautogui.click(pyautogui.locateOnScreen('Pattern\\MainMenu.png', confidence=0.9, grayscale=True))
 
 # Creating presentation in Czech
@@ -205,6 +219,7 @@ if (pyautogui.locateOnScreen('Pattern\\\Languages\\Czech\\CrPre.png', confidence
         f"{date} - There's a problem with Czech language in presentation \n")  # Write down that something's wrong
 else:
     print('Everything is alright with Czech language in presentation')
+pyautogui.hotkey('Ctrl', 'w')
 pyautogui.click(pyautogui.locateOnScreen('Pattern\\MainMenu.png', confidence=0.9, grayscale=True))
 
 # Changing the language to Danish
@@ -220,6 +235,7 @@ if (pyautogui.locateOnScreen('Pattern\\\Languages\\Danish\\CrDoc.png', confidenc
     f.write(f"{date} - There's a problem with Danish language in document \n")  # Write down that something's wrong
 else:
     print('Everything is alright with Danish language in document')
+pyautogui.hotkey('Ctrl', 'w')
 pyautogui.click(pyautogui.locateOnScreen('Pattern\\MainMenu.png', confidence=0.9, grayscale=True))
 
 # Creating spreadsheet in Danish
@@ -232,6 +248,7 @@ if (pyautogui.locateOnScreen('Pattern\\\Languages\\Danish\\CrSpr.png', confidenc
         f"{date} - There's a problem with Danish language in spreadsheet \n")  # Write down that something's wrong
 else:
     print('Everything is alright with Danish language in spreadsheet')
+pyautogui.hotkey('Ctrl', 'w')
 pyautogui.click(pyautogui.locateOnScreen('Pattern\\MainMenu.png', confidence=0.9, grayscale=True))
 
 # Creating presentation in Danish
@@ -244,6 +261,7 @@ if (pyautogui.locateOnScreen('Pattern\\\Languages\\Danish\\CrPre.png', confidenc
         f"{date} - There's a problem with Danish language in presentation \n")  # Write down that something's wrong
 else:
     print('Everything is alright with Danish language in presentation')
+pyautogui.hotkey('Ctrl', 'w')
 pyautogui.click(pyautogui.locateOnScreen('Pattern\\MainMenu.png', confidence=0.9, grayscale=True))
 
 # Changing the language to German
@@ -259,6 +277,7 @@ if (pyautogui.locateOnScreen('Pattern\\\Languages\\German\\CrDoc.png', confidenc
     f.write(f"{date} - There's a problem with German language in document \n")  # Write down that something's wrong
 else:
     print('Everything is alright with German language in document')
+pyautogui.hotkey('Ctrl', 'w')
 pyautogui.click(pyautogui.locateOnScreen('Pattern\\MainMenu.png', confidence=0.9, grayscale=True))
 
 # Creating spreadsheet in German
@@ -271,6 +290,7 @@ if (pyautogui.locateOnScreen('Pattern\\\Languages\\German\\CrSpr.png', confidenc
         f"{date} - There's a problem with German language in spreadsheet \n")  # Write down that something's wrong
 else:
     print('Everything is alright with German language in spreadsheet')
+pyautogui.hotkey('Ctrl', 'w')
 pyautogui.click(pyautogui.locateOnScreen('Pattern\\MainMenu.png', confidence=0.9, grayscale=True))
 
 # Creating presentation in German
@@ -283,6 +303,7 @@ if (pyautogui.locateOnScreen('Pattern\\\Languages\\German\\CrPre.png', confidenc
         f"{date} - There's a problem with German language in presentation \n")  # Write down that something's wrong
 else:
     print('Everything is alright with German language in presentation')
+pyautogui.hotkey('Ctrl', 'w')
 pyautogui.click(pyautogui.locateOnScreen('Pattern\\MainMenu.png', confidence=0.9, grayscale=True))
 
 # Changing the language to Greek
@@ -298,6 +319,7 @@ if (pyautogui.locateOnScreen('Pattern\\\Languages\\Greek\\CrDoc.png', confidence
     f.write(f"{date} - There's a problem with Greek language in document \n")  # Write down that something's wrong
 else:
     print('Everything is alright with Greek language in document')
+pyautogui.hotkey('Ctrl', 'w')
 pyautogui.click(pyautogui.locateOnScreen('Pattern\\MainMenu.png', confidence=0.9, grayscale=True))
 
 # Creating spreadsheet in Greek
@@ -310,6 +332,7 @@ if (pyautogui.locateOnScreen('Pattern\\\Languages\\Greek\\CrSpr.png', confidence
         f"{date} - There's a problem with Greek language in spreadsheet \n")  # Write down that something's wrong
 else:
     print('Everything is alright with Greek language in spreadsheet')
+pyautogui.hotkey('Ctrl', 'w')
 pyautogui.click(pyautogui.locateOnScreen('Pattern\\MainMenu.png', confidence=0.9, grayscale=True))
 
 # Creating presentation in Greek
@@ -322,6 +345,7 @@ if (pyautogui.locateOnScreen('Pattern\\\Languages\\Greek\\CrPre.png', confidence
         f"{date} - There's a problem with Greek language in presentation \n")  # Write down that something's wrong
 else:
     print('Everything is alright with Greek language in presentation')
+pyautogui.hotkey('Ctrl', 'w')
 pyautogui.click(pyautogui.locateOnScreen('Pattern\\MainMenu.png', confidence=0.9, grayscale=True))
 
 # Changing the language to English
@@ -337,6 +361,7 @@ if (pyautogui.locateOnScreen('Pattern\\\Languages\\English\\CrDoc.png', confiden
     f.write(f"{date} - There's a problem with English language in document \n")  # Write down that something's wrong
 else:
     print('Everything is alright with English language in document')
+pyautogui.hotkey('Ctrl', 'w')
 pyautogui.click(pyautogui.locateOnScreen('Pattern\\MainMenu.png', confidence=0.9, grayscale=True))
 
 # Creating spreadsheet in English
@@ -349,6 +374,7 @@ if (pyautogui.locateOnScreen('Pattern\\\Languages\\English\\CrSpr.png', confiden
         f"{date} - There's a problem with English language in spreadsheet \n")  # Write down that something's wrong
 else:
     print('Everything is alright with English language in spreadsheet')
+pyautogui.hotkey('Ctrl', 'w')
 pyautogui.click(pyautogui.locateOnScreen('Pattern\\MainMenu.png', confidence=0.9, grayscale=True))
 
 # Creating presentation in English
@@ -361,6 +387,7 @@ if (pyautogui.locateOnScreen('Pattern\\\Languages\\English\\CrPre.png', confiden
         f"{date} - There's a problem with English language in presentation \n")  # Write down that something's wrong
 else:
     print('Everything is alright with English language in presentation')
+pyautogui.hotkey('Ctrl', 'w')
 pyautogui.click(pyautogui.locateOnScreen('Pattern\\MainMenu.png', confidence=0.9, grayscale=True))
 
 # Changing the language to Spanish
@@ -376,6 +403,7 @@ if (pyautogui.locateOnScreen('Pattern\\\Languages\\Spanish\\CrDoc.png', confiden
     f.write(f"{date} - There's a problem with Spanish language in document \n")  # Write down that something's wrong
 else:
     print('Everything is alright with Spanish language in document')
+pyautogui.hotkey('Ctrl', 'w')
 pyautogui.click(pyautogui.locateOnScreen('Pattern\\MainMenu.png', confidence=0.9, grayscale=True))
 
 # Creating spreadsheet in Spanish
@@ -388,6 +416,7 @@ if (pyautogui.locateOnScreen('Pattern\\\Languages\\Spanish\\CrSpr.png', confiden
         f"{date} - There's a problem with Spanish language in spreadsheet \n")  # Write down that something's wrong
 else:
     print('Everything is alright with Spanish language in spreadsheet')
+pyautogui.hotkey('Ctrl', 'w')
 pyautogui.click(pyautogui.locateOnScreen('Pattern\\MainMenu.png', confidence=0.9, grayscale=True))
 
 # Creating presentation in Spanish
@@ -400,6 +429,7 @@ if (pyautogui.locateOnScreen('Pattern\\\Languages\\Spanish\\CrPre.png', confiden
         f"{date} - There's a problem with Spanish language in presentation \n")  # Write down that something's wrong
 else:
     print('Everything is alright with Spanish language in presentation')
+pyautogui.hotkey('Ctrl', 'w')
 pyautogui.click(pyautogui.locateOnScreen('Pattern\\MainMenu.png', confidence=0.9, grayscale=True))
 
 # Changing the language to Finnish
@@ -415,6 +445,7 @@ if (pyautogui.locateOnScreen('Pattern\\\Languages\\Finnish\\CrDoc.png', confiden
     f.write(f"{date} - There's a problem with Finnish language in document \n")  # Write down that something's wrong
 else:
     print('Everything is alright with Finnish language in document')
+pyautogui.hotkey('Ctrl', 'w')
 pyautogui.click(pyautogui.locateOnScreen('Pattern\\MainMenu.png', confidence=0.9, grayscale=True))
 
 # Creating spreadsheet in Finnish
@@ -427,6 +458,7 @@ if (pyautogui.locateOnScreen('Pattern\\\Languages\\Finnish\\CrSpr.png', confiden
         f"{date} - There's a problem with Finnish language in spreadsheet \n")  # Write down that something's wrong
 else:
     print('Everything is alright with Finnish language in spreadsheet')
+pyautogui.hotkey('Ctrl', 'w')
 pyautogui.click(pyautogui.locateOnScreen('Pattern\\MainMenu.png', confidence=0.9, grayscale=True))
 
 # Creating presentation in Finnish
@@ -439,6 +471,7 @@ if (pyautogui.locateOnScreen('Pattern\\\Languages\\Finnish\\CrPre.png', confiden
         f"{date} - There's a problem with Finnish language in presentation \n")  # Write down that something's wrong
 else:
     print('Everything is alright with Finnish language in presentation')
+pyautogui.hotkey('Ctrl', 'w')
 pyautogui.click(pyautogui.locateOnScreen('Pattern\\MainMenu.png', confidence=0.9, grayscale=True))
 
 # Changing the language to French
@@ -454,6 +487,7 @@ if (pyautogui.locateOnScreen('Pattern\\\Languages\\French\\CrDoc.png', confidenc
     f.write(f"{date} - There's a problem with French language in document \n")  # Write down that something's wrong
 else:
     print('Everything is alright with French language in document')
+pyautogui.hotkey('Ctrl', 'w')
 pyautogui.click(pyautogui.locateOnScreen('Pattern\\MainMenu.png', confidence=0.9, grayscale=True))
 
 # Creating spreadsheet in French
@@ -466,6 +500,7 @@ if (pyautogui.locateOnScreen('Pattern\\\Languages\\French\\CrSpr.png', confidenc
         f"{date} - There's a problem with French language in spreadsheet \n")  # Write down that something's wrong
 else:
     print('Everything is alright with French language in spreadsheet')
+pyautogui.hotkey('Ctrl', 'w')
 pyautogui.click(pyautogui.locateOnScreen('Pattern\\MainMenu.png', confidence=0.9, grayscale=True))
 
 # Creating presentation in French
@@ -478,6 +513,7 @@ if (pyautogui.locateOnScreen('Pattern\\\Languages\\French\\CrPre.png', confidenc
         f"{date} - There's a problem with French language in presentation \n")  # Write down that something's wrong
 else:
     print('Everything is alright with French language in presentation')
+pyautogui.hotkey('Ctrl', 'w')
 pyautogui.click(pyautogui.locateOnScreen('Pattern\\MainMenu.png', confidence=0.9, grayscale=True))
 
 # Changing the language to Galician
@@ -493,6 +529,7 @@ if (pyautogui.locateOnScreen('Pattern\\\Languages\\Galician\\CrDoc.png', confide
     f.write(f"{date} - There's a problem with Galician language in document \n")  # Write down that something's wrong
 else:
     print('Everything is alright with Galician language in document')
+pyautogui.hotkey('Ctrl', 'w')
 pyautogui.click(pyautogui.locateOnScreen('Pattern\\MainMenu.png', confidence=0.9, grayscale=True))
 
 # Creating spreadsheet in Galician
@@ -505,6 +542,7 @@ if (pyautogui.locateOnScreen('Pattern\\\Languages\\Galician\\CrSpr.png', confide
         f"{date} - There's a problem with Galician language in spreadsheet \n")  # Write down that something's wrong
 else:
     print('Everything is alright with Galician language in spreadsheet')
+pyautogui.hotkey('Ctrl', 'w')
 pyautogui.click(pyautogui.locateOnScreen('Pattern\\MainMenu.png', confidence=0.9, grayscale=True))
 
 # Creating presentation in Galician
@@ -517,6 +555,7 @@ if (pyautogui.locateOnScreen('Pattern\\\Languages\\Galician\\CrPre.png', confide
         f"{date} - There's a problem with Galician language in presentation \n")  # Write down that something's wrong
 else:
     print('Everything is alright with Galician language in presentation')
+pyautogui.hotkey('Ctrl', 'w')
 pyautogui.click(pyautogui.locateOnScreen('Pattern\\MainMenu.png', confidence=0.9, grayscale=True))
 
 # Changing the language to Hungarian
@@ -532,6 +571,7 @@ if (pyautogui.locateOnScreen('Pattern\\\Languages\\Hungarian\\CrDoc.png', confid
     f.write(f"{date} - There's a problem with Hungarian language in document \n")  # Write down that something's wrong
 else:
     print('Everything is alright with Hungarian language in document')
+pyautogui.hotkey('Ctrl', 'w')
 pyautogui.click(pyautogui.locateOnScreen('Pattern\\MainMenu.png', confidence=0.9, grayscale=True))
 
 # Creating spreadsheet in Hungarian
@@ -544,6 +584,7 @@ if (pyautogui.locateOnScreen('Pattern\\\Languages\\Hungarian\\CrSpr.png', confid
         f"{date} - There's a problem with Hungarian language in spreadsheet \n")  # Write down that something's wrong
 else:
     print('Everything is alright with Hungarian language in spreadsheet')
+pyautogui.hotkey('Ctrl', 'w')
 pyautogui.click(pyautogui.locateOnScreen('Pattern\\MainMenu.png', confidence=0.9, grayscale=True))
 
 # Creating presentation in Hungarian
@@ -556,6 +597,7 @@ if (pyautogui.locateOnScreen('Pattern\\\Languages\\Hungarian\\CrPre.png', confid
         f"{date} - There's a problem with Hungarian language in presentation \n")  # Write down that something's wrong
 else:
     print('Everything is alright with Hungarian language in presentation')
+pyautogui.hotkey('Ctrl', 'w')
 pyautogui.click(pyautogui.locateOnScreen('Pattern\\MainMenu.png', confidence=0.9, grayscale=True))
 
 # Changing the language to Indonesian
@@ -572,6 +614,7 @@ if (pyautogui.locateOnScreen('Pattern\\\Languages\\Indonesian\\CrDoc.png', confi
     f.write(f"{date} - There's a problem with Indonesian language in document \n")  # Write down that something's wrong
 else:
     print('Everything is alright with Indonesian language in document')
+pyautogui.hotkey('Ctrl', 'w')
 pyautogui.click(pyautogui.locateOnScreen('Pattern\\MainMenu.png', confidence=0.9, grayscale=True))
 
 # Creating spreadsheet in Indonesian
@@ -584,6 +627,7 @@ if (pyautogui.locateOnScreen('Pattern\\\Languages\\Indonesian\\CrSpr.png', confi
         f"{date} - There's a problem with Indonesian language in spreadsheet \n")  # Write down that something's wrong
 else:
     print('Everything is alright with Indonesian language in spreadsheet')
+pyautogui.hotkey('Ctrl', 'w')
 pyautogui.click(pyautogui.locateOnScreen('Pattern\\MainMenu.png', confidence=0.9, grayscale=True))
 
 # Creating presentation in Indonesian
@@ -596,6 +640,7 @@ if (pyautogui.locateOnScreen('Pattern\\\Languages\\Indonesian\\CrPre.png', confi
         f"{date} - There's a problem with Indonesian language in presentation \n")  # Write down that something's wrong
 else:
     print('Everything is alright with Indonesian language in presentation')
+pyautogui.hotkey('Ctrl', 'w')
 pyautogui.click(pyautogui.locateOnScreen('Pattern\\MainMenu.png', confidence=0.9, grayscale=True))
 
 # Changing the language to Italian
@@ -612,6 +657,7 @@ if (pyautogui.locateOnScreen('Pattern\\\Languages\\Italian\\CrDoc.png', confiden
     f.write(f"{date} - There's a problem with Italian language in document \n")  # Write down that something's wrong
 else:
     print('Everything is alright with Italian language in document')
+pyautogui.hotkey('Ctrl', 'w')
 pyautogui.click(pyautogui.locateOnScreen('Pattern\\MainMenu.png', confidence=0.9, grayscale=True))
 
 # Creating spreadsheet in Italian
@@ -624,6 +670,7 @@ if (pyautogui.locateOnScreen('Pattern\\\Languages\\Italian\\CrSpr.png', confiden
         f"{date} - There's a problem with Italian language in spreadsheet \n")  # Write down that something's wrong
 else:
     print('Everything is alright with Italian language in spreadsheet')
+pyautogui.hotkey('Ctrl', 'w')
 pyautogui.click(pyautogui.locateOnScreen('Pattern\\MainMenu.png', confidence=0.9, grayscale=True))
 
 # Creating presentation in Italian
@@ -636,6 +683,7 @@ if (pyautogui.locateOnScreen('Pattern\\\Languages\\Italian\\CrPre.png', confiden
         f"{date} - There's a problem with Italian language in presentation \n")  # Write down that something's wrong
 else:
     print('Everything is alright with Italian language in presentation')
+pyautogui.hotkey('Ctrl', 'w')
 pyautogui.click(pyautogui.locateOnScreen('Pattern\\MainMenu.png', confidence=0.9, grayscale=True))
 
 # Changing the language to Japanese
@@ -651,6 +699,7 @@ if (pyautogui.locateOnScreen('Pattern\\\Languages\\Japanese\\CrDoc.png', confide
     f.write(f"{date} - There's a problem with Japanese language in document \n")  # Write down that something's wrong
 else:
     print('Everything is alright with Japanese language in document')
+pyautogui.hotkey('Ctrl', 'w')
 pyautogui.click(pyautogui.locateOnScreen('Pattern\\MainMenu.png', confidence=0.9, grayscale=True))
 
 # Creating spreadsheet in Japanese
@@ -663,6 +712,7 @@ if (pyautogui.locateOnScreen('Pattern\\\Languages\\Japanese\\CrSpr.png', confide
         f"{date} - There's a problem with Japanese language in spreadsheet \n")  # Write down that something's wrong
 else:
     print('Everything is alright with Japanese language in spreadsheet')
+pyautogui.hotkey('Ctrl', 'w')
 pyautogui.click(pyautogui.locateOnScreen('Pattern\\MainMenu.png', confidence=0.9, grayscale=True))
 
 # Creating presentation in Japanese
@@ -675,6 +725,7 @@ if (pyautogui.locateOnScreen('Pattern\\\Languages\\Japanese\\CrPre.png', confide
         f"{date} - There's a problem with Japanese language in presentation \n")  # Write down that something's wrong
 else:
     print('Everything is alright with Japanese language in presentation')
+pyautogui.hotkey('Ctrl', 'w')
 pyautogui.click(pyautogui.locateOnScreen('Pattern\\MainMenu.png', confidence=0.9, grayscale=True))
 
 # Changing the language to Korean
@@ -690,6 +741,7 @@ if (pyautogui.locateOnScreen('Pattern\\\Languages\\Korean\\CrDoc.png', confidenc
     f.write(f"{date} - There's a problem with Korean language in document \n")  # Write down that something's wrong
 else:
     print('Everything is alright with Korean language in document')
+pyautogui.hotkey('Ctrl', 'w')
 pyautogui.click(pyautogui.locateOnScreen('Pattern\\MainMenu.png', confidence=0.9, grayscale=True))
 
 # Creating spreadsheet in Korean
@@ -702,6 +754,7 @@ if (pyautogui.locateOnScreen('Pattern\\\Languages\\Korean\\CrSpr.png', confidenc
         f"{date} - There's a problem with Korean language in spreadsheet \n")  # Write down that something's wrong
 else:
     print('Everything is alright with Korean language in spreadsheet')
+pyautogui.hotkey('Ctrl', 'w')
 pyautogui.click(pyautogui.locateOnScreen('Pattern\\MainMenu.png', confidence=0.9, grayscale=True))
 
 # Creating presentation in Korean
@@ -714,6 +767,7 @@ if (pyautogui.locateOnScreen('Pattern\\\Languages\\Korean\\CrPre.png', confidenc
         f"{date} - There's a problem with Korean language in presentation \n")  # Write down that something's wrong
 else:
     print('Everything is alright with Korean language in presentation')
+pyautogui.hotkey('Ctrl', 'w')
 pyautogui.click(pyautogui.locateOnScreen('Pattern\\MainMenu.png', confidence=0.9, grayscale=True))
 
 # Changing the language to Lao
@@ -729,6 +783,7 @@ if (pyautogui.locateOnScreen('Pattern\\\Languages\\Lao\\CrDoc.png', confidence=0
     f.write(f"{date} - There's a problem with Lao language in document \n")  # Write down that something's wrong
 else:
     print('Everything is alright with Lao language in document')
+pyautogui.hotkey('Ctrl', 'w')
 pyautogui.click(pyautogui.locateOnScreen('Pattern\\MainMenu.png', confidence=0.9, grayscale=True))
 
 # Creating spreadsheet in Lao
@@ -741,6 +796,7 @@ if (pyautogui.locateOnScreen('Pattern\\\Languages\\Lao\\CrSpr.png', confidence=0
         f"{date} - There's a problem with Lao language in spreadsheet \n")  # Write down that something's wrong
 else:
     print('Everything is alright with Lao language in spreadsheet')
+pyautogui.hotkey('Ctrl', 'w')
 pyautogui.click(pyautogui.locateOnScreen('Pattern\\MainMenu.png', confidence=0.9, grayscale=True))
 
 # Creating presentation in Lao
@@ -753,6 +809,7 @@ if (pyautogui.locateOnScreen('Pattern\\\Languages\\Lao\\CrPre.png', confidence=0
         f"{date} - There's a problem with Lao language in presentation \n")  # Write down that something's wrong
 else:
     print('Everything is alright with Lao language in presentation')
+pyautogui.hotkey('Ctrl', 'w')
 pyautogui.click(pyautogui.locateOnScreen('Pattern\\MainMenu.png', confidence=0.9, grayscale=True))
 
 # Changing the language to Latvian
@@ -768,6 +825,7 @@ if (pyautogui.locateOnScreen('Pattern\\\Languages\\Latvian\\CrDoc.png', confiden
     f.write(f"{date} - There's a problem with Latvian language in document \n")  # Write down that something's wrong
 else:
     print('Everything is alright with Latvian language in document')
+pyautogui.hotkey('Ctrl', 'w')
 pyautogui.click(pyautogui.locateOnScreen('Pattern\\MainMenu.png', confidence=0.9, grayscale=True))
 
 # Creating spreadsheet in Latvian
@@ -780,6 +838,7 @@ if (pyautogui.locateOnScreen('Pattern\\\Languages\\Latvian\\CrSpr.png', confiden
         f"{date} - There's a problem with Latvian language in spreadsheet \n")  # Write down that something's wrong
 else:
     print('Everything is alright with Latvian language in spreadsheet')
+pyautogui.hotkey('Ctrl', 'w')
 pyautogui.click(pyautogui.locateOnScreen('Pattern\\MainMenu.png', confidence=0.9, grayscale=True))
 
 # Creating presentation in Latvian
@@ -792,6 +851,7 @@ if (pyautogui.locateOnScreen('Pattern\\\Languages\\Latvian\\CrPre.png', confiden
         f"{date} - There's a problem with Latvian language in presentation \n")  # Write down that something's wrong
 else:
     print('Everything is alright with Latvian language in presentation')
+pyautogui.hotkey('Ctrl', 'w')
 pyautogui.click(pyautogui.locateOnScreen('Pattern\\MainMenu.png', confidence=0.9, grayscale=True))
 
 # Changing the language to Netherlands
@@ -807,6 +867,7 @@ if (pyautogui.locateOnScreen('Pattern\\\Languages\\Netherlands\\CrDoc.png', conf
     f.write(f"{date} - There's a problem with Netherlands language in document \n")  # Write down that something's wrong
 else:
     print('Everything is alright with Netherlands language in document')
+pyautogui.hotkey('Ctrl', 'w')
 pyautogui.click(pyautogui.locateOnScreen('Pattern\\MainMenu.png', confidence=0.9, grayscale=True))
 
 # Creating spreadsheet in Netherlands
@@ -819,6 +880,7 @@ if (pyautogui.locateOnScreen('Pattern\\\Languages\\Netherlands\\CrSpr.png', conf
         f"{date} - There's a problem with Netherlands language in spreadsheet \n")  # Write down that something's wrong
 else:
     print('Everything is alright with Netherlands language in spreadsheet')
+pyautogui.hotkey('Ctrl', 'w')
 pyautogui.click(pyautogui.locateOnScreen('Pattern\\MainMenu.png', confidence=0.9, grayscale=True))
 
 # Creating presentation in Netherlands
@@ -831,6 +893,7 @@ if (pyautogui.locateOnScreen('Pattern\\\Languages\\Netherlands\\CrPre.png', conf
         f"{date} - There's a problem with Netherlands language in presentation \n")  # Write down that something's wrong
 else:
     print('Everything is alright with Netherlands language in presentation')
+pyautogui.hotkey('Ctrl', 'w')
 pyautogui.click(pyautogui.locateOnScreen('Pattern\\MainMenu.png', confidence=0.9, grayscale=True))
 
 # Changing the language to Norwegian
@@ -847,6 +910,7 @@ if (pyautogui.locateOnScreen('Pattern\\\Languages\\Norwegian\\CrDoc.png', confid
     f.write(f"{date} - There's a problem with Norwegian language in document \n")  # Write down that something's wrong
 else:
     print('Everything is alright with Norwegian language in document')
+pyautogui.hotkey('Ctrl', 'w')
 pyautogui.click(pyautogui.locateOnScreen('Pattern\\MainMenu.png', confidence=0.9, grayscale=True))
 
 # Creating spreadsheet in Norwegian
@@ -859,6 +923,7 @@ if (pyautogui.locateOnScreen('Pattern\\\Languages\\Norwegian\\CrSpr.png', confid
         f"{date} - There's a problem with Norwegian language in spreadsheet \n")  # Write down that something's wrong
 else:
     print('Everything is alright with Norwegian language in spreadsheet')
+pyautogui.hotkey('Ctrl', 'w')
 pyautogui.click(pyautogui.locateOnScreen('Pattern\\MainMenu.png', confidence=0.9, grayscale=True))
 
 # Creating presentation in Norwegian
@@ -871,6 +936,7 @@ if (pyautogui.locateOnScreen('Pattern\\\Languages\\Norwegian\\CrPre.png', confid
         f"{date} - There's a problem with Norwegian language in presentation \n")  # Write down that something's wrong
 else:
     print('Everything is alright with Norwegian language in presentation')
+pyautogui.hotkey('Ctrl', 'w')
 pyautogui.click(pyautogui.locateOnScreen('Pattern\\MainMenu.png', confidence=0.9, grayscale=True))
 
 # Changing the language to Polish
@@ -887,6 +953,7 @@ if (pyautogui.locateOnScreen('Pattern\\\Languages\\Polish\\CrDoc.png', confidenc
     f.write(f"{date} - There's a problem with Polish language in document \n")  # Write down that something's wrong
 else:
     print('Everything is alright with Polish language in document')
+pyautogui.hotkey('Ctrl', 'w')
 pyautogui.click(pyautogui.locateOnScreen('Pattern\\MainMenu.png', confidence=0.9, grayscale=True))
 
 # Creating spreadsheet in Polish
@@ -899,6 +966,7 @@ if (pyautogui.locateOnScreen('Pattern\\\Languages\\Polish\\CrSpr.png', confidenc
         f"{date} - There's a problem with Polish language in spreadsheet \n")  # Write down that something's wrong
 else:
     print('Everything is alright with Polish language in spreadsheet')
+pyautogui.hotkey('Ctrl', 'w')
 pyautogui.click(pyautogui.locateOnScreen('Pattern\\MainMenu.png', confidence=0.9, grayscale=True))
 
 # Creating presentation in Polish
@@ -911,6 +979,7 @@ if (pyautogui.locateOnScreen('Pattern\\\Languages\\Polish\\CrPre.png', confidenc
         f"{date} - There's a problem with Polish language in presentation \n")  # Write down that something's wrong
 else:
     print('Everything is alright with Polish language in presentation')
+pyautogui.hotkey('Ctrl', 'w')
 pyautogui.click(pyautogui.locateOnScreen('Pattern\\MainMenu.png', confidence=0.9, grayscale=True))
 
 # Changing the language to Portuguese
@@ -926,6 +995,7 @@ if (pyautogui.locateOnScreen('Pattern\\\Languages\\Portuguese\\CrDoc.png', confi
     f.write(f"{date} - There's a problem with Portuguese language in document \n")  # Write down that something's wrong
 else:
     print('Everything is alright with Portuguese language in document')
+pyautogui.hotkey('Ctrl', 'w')
 pyautogui.click(pyautogui.locateOnScreen('Pattern\\MainMenu.png', confidence=0.9, grayscale=True))
 
 # Creating spreadsheet in Portuguese
@@ -938,6 +1008,7 @@ if (pyautogui.locateOnScreen('Pattern\\\Languages\\Portuguese\\CrSpr.png', confi
         f"{date} - There's a problem with Portuguese language in spreadsheet \n")  # Write down that something's wrong
 else:
     print('Everything is alright with Portuguese language in spreadsheet')
+pyautogui.hotkey('Ctrl', 'w')
 pyautogui.click(pyautogui.locateOnScreen('Pattern\\MainMenu.png', confidence=0.9, grayscale=True))
 
 # Creating presentation in Portuguese
@@ -950,6 +1021,7 @@ if (pyautogui.locateOnScreen('Pattern\\\Languages\\Portuguese\\CrPre.png', confi
         f"{date} - There's a problem with Portuguese language in presentation \n")  # Write down that something's wrong
 else:
     print('Everything is alright with Portuguese language in presentation')
+pyautogui.hotkey('Ctrl', 'w')
 pyautogui.click(pyautogui.locateOnScreen('Pattern\\MainMenu.png', confidence=0.9, grayscale=True))
 
 # Changing the language to Romanian
@@ -966,6 +1038,7 @@ if (pyautogui.locateOnScreen('Pattern\\\Languages\\Romanian\\CrDoc.png', confide
     f.write(f"{date} - There's a problem with Romanian language in document \n")  # Write down that something's wrong
 else:
     print('Everything is alright with Romanian language in document')
+pyautogui.hotkey('Ctrl', 'w')
 pyautogui.click(pyautogui.locateOnScreen('Pattern\\MainMenu.png', confidence=0.9, grayscale=True))
 
 # Creating spreadsheet in Romanian
@@ -978,6 +1051,7 @@ if (pyautogui.locateOnScreen('Pattern\\\Languages\\Romanian\\CrSpr.png', confide
         f"{date} - There's a problem with Romanian language in spreadsheet \n")  # Write down that something's wrong
 else:
     print('Everything is alright with Romanian language in spreadsheet')
+pyautogui.hotkey('Ctrl', 'w')
 pyautogui.click(pyautogui.locateOnScreen('Pattern\\MainMenu.png', confidence=0.9, grayscale=True))
 
 # Creating presentation in Romanian
@@ -990,6 +1064,7 @@ if (pyautogui.locateOnScreen('Pattern\\\Languages\\Romanian\\CrPre.png', confide
         f"{date} - There's a problem with Romanian language in presentation \n")  # Write down that something's wrong
 else:
     print('Everything is alright with Romanian language in presentation')
+pyautogui.hotkey('Ctrl', 'w')
 pyautogui.click(pyautogui.locateOnScreen('Pattern\\MainMenu.png', confidence=0.9, grayscale=True))
 
 # Changing the language to Russian
@@ -1005,6 +1080,7 @@ if (pyautogui.locateOnScreen('Pattern\\\Languages\\Russian\\CrDoc.png', confiden
     f.write(f"{date} - There's a problem with Russian language in document \n")  # Write down that something's wrong
 else:
     print('Everything is alright with Russian language in document')
+pyautogui.hotkey('Ctrl', 'w')
 pyautogui.click(pyautogui.locateOnScreen('Pattern\\MainMenu.png', confidence=0.9, grayscale=True))
 
 # Creating spreadsheet in Russian
@@ -1017,6 +1093,7 @@ if (pyautogui.locateOnScreen('Pattern\\\Languages\\Russian\\CrSpr.png', confiden
         f"{date} - There's a problem with Russian language in spreadsheet \n")  # Write down that something's wrong
 else:
     print('Everything is alright with Russian language in spreadsheet')
+pyautogui.hotkey('Ctrl', 'w')
 pyautogui.click(pyautogui.locateOnScreen('Pattern\\MainMenu.png', confidence=0.9, grayscale=True))
 
 # Creating presentation in Russian
@@ -1029,6 +1106,7 @@ if (pyautogui.locateOnScreen('Pattern\\\Languages\\Russian\\CrPre.png', confiden
         f"{date} - There's a problem with Russian language in presentation \n")  # Write down that something's wrong
 else:
     print('Everything is alright with Russian language in presentation')
+pyautogui.hotkey('Ctrl', 'w')
 pyautogui.click(pyautogui.locateOnScreen('Pattern\\MainMenu.png', confidence=0.9, grayscale=True))
 
 # Changing the language to Slovak
@@ -1044,6 +1122,7 @@ if (pyautogui.locateOnScreen('Pattern\\\Languages\\Slovak\\CrDoc.png', confidenc
     f.write(f"{date} - There's a problem with Slovak language in document \n")  # Write down that something's wrong
 else:
     print('Everything is alright with Slovak language in document')
+pyautogui.hotkey('Ctrl', 'w')
 pyautogui.click(pyautogui.locateOnScreen('Pattern\\MainMenu.png', confidence=0.9, grayscale=True))
 
 # Creating spreadsheet in Slovak
@@ -1056,6 +1135,7 @@ if (pyautogui.locateOnScreen('Pattern\\\Languages\\Slovak\\CrSpr.png', confidenc
         f"{date} - There's a problem with Slovak language in spreadsheet \n")  # Write down that something's wrong
 else:
     print('Everything is alright with Slovak language in spreadsheet')
+pyautogui.hotkey('Ctrl', 'w')
 pyautogui.click(pyautogui.locateOnScreen('Pattern\\MainMenu.png', confidence=0.9, grayscale=True))
 
 # Creating presentation in Slovak
@@ -1068,6 +1148,7 @@ if (pyautogui.locateOnScreen('Pattern\\\Languages\\Slovak\\CrPre.png', confidenc
         f"{date} - There's a problem with Slovak language in presentation \n")  # Write down that something's wrong
 else:
     print('Everything is alright with Slovak language in presentation')
+pyautogui.hotkey('Ctrl', 'w')
 pyautogui.click(pyautogui.locateOnScreen('Pattern\\MainMenu.png', confidence=0.9, grayscale=True))
 
 # Changing the language to Slovenian
@@ -1083,6 +1164,7 @@ if (pyautogui.locateOnScreen('Pattern\\\Languages\\Slovenian\\CrDoc.png', confid
     f.write(f"{date} - There's a problem with Slovenian language in document \n")  # Write down that something's wrong
 else:
     print('Everything is alright with Slovenian language in document')
+pyautogui.hotkey('Ctrl', 'w')
 pyautogui.click(pyautogui.locateOnScreen('Pattern\\MainMenu.png', confidence=0.9, grayscale=True))
 
 # Creating spreadsheet in Slovenian
@@ -1095,6 +1177,7 @@ if (pyautogui.locateOnScreen('Pattern\\\Languages\\Slovenian\\CrSpr.png', confid
         f"{date} - There's a problem with Slovenian language in spreadsheet \n")  # Write down that something's wrong
 else:
     print('Everything is alright with Slovenian language in spreadsheet')
+pyautogui.hotkey('Ctrl', 'w')
 pyautogui.click(pyautogui.locateOnScreen('Pattern\\MainMenu.png', confidence=0.9, grayscale=True))
 
 # Creating presentation in Slovenian
@@ -1107,6 +1190,7 @@ if (pyautogui.locateOnScreen('Pattern\\\Languages\\Slovenian\\CrPre.png', confid
         f"{date} - There's a problem with Slovenian language in presentation \n")  # Write down that something's wrong
 else:
     print('Everything is alright with Slovenian language in presentation')
+pyautogui.hotkey('Ctrl', 'w')
 pyautogui.click(pyautogui.locateOnScreen('Pattern\\MainMenu.png', confidence=0.9, grayscale=True))
 
 # Changing the language to Swedish
@@ -1123,6 +1207,7 @@ if (pyautogui.locateOnScreen('Pattern\\\Languages\\Swedish\\CrDoc.png', confiden
     f.write(f"{date} - There's a problem with Swedish language in document \n")  # Write down that something's wrong
 else:
     print('Everything is alright with Swedish language in document')
+pyautogui.hotkey('Ctrl', 'w')
 pyautogui.click(pyautogui.locateOnScreen('Pattern\\MainMenu.png', confidence=0.9, grayscale=True))
 
 # Creating spreadsheet in Swedish
@@ -1135,6 +1220,7 @@ if (pyautogui.locateOnScreen('Pattern\\\Languages\\Swedish\\CrSpr.png', confiden
         f"{date} - There's a problem with Swedish language in spreadsheet \n")  # Write down that something's wrong
 else:
     print('Everything is alright with Swedish language in spreadsheet')
+pyautogui.hotkey('Ctrl', 'w')
 pyautogui.click(pyautogui.locateOnScreen('Pattern\\MainMenu.png', confidence=0.9, grayscale=True))
 
 # Creating presentation in Swedish
@@ -1147,6 +1233,7 @@ if (pyautogui.locateOnScreen('Pattern\\\Languages\\Swedish\\CrPre.png', confiden
         f"{date} - There's a problem with Swedish language in presentation \n")  # Write down that something's wrong
 else:
     print('Everything is alright with Swedish language in presentation')
+pyautogui.hotkey('Ctrl', 'w')
 pyautogui.click(pyautogui.locateOnScreen('Pattern\\MainMenu.png', confidence=0.9, grayscale=True))
 
 # Changing the language to Turkish
@@ -1162,6 +1249,7 @@ if (pyautogui.locateOnScreen('Pattern\\\Languages\\Turkish\\CrDoc.png', confiden
     f.write(f"{date} - There's a problem with Turkish language in document \n")  # Write down that something's wrong
 else:
     print('Everything is alright with Turkish language in document')
+pyautogui.hotkey('Ctrl', 'w')
 pyautogui.click(pyautogui.locateOnScreen('Pattern\\MainMenu.png', confidence=0.9, grayscale=True))
 
 # Creating spreadsheet in Turkish
@@ -1174,6 +1262,7 @@ if (pyautogui.locateOnScreen('Pattern\\\Languages\\Turkish\\CrSpr.png', confiden
         f"{date} - There's a problem with Turkish language in spreadsheet \n")  # Write down that something's wrong
 else:
     print('Everything is alright with Turkish language in spreadsheet')
+pyautogui.hotkey('Ctrl', 'w')
 pyautogui.click(pyautogui.locateOnScreen('Pattern\\MainMenu.png', confidence=0.9, grayscale=True))
 
 # Creating presentation in Turkish
@@ -1186,6 +1275,7 @@ if (pyautogui.locateOnScreen('Pattern\\\Languages\\Turkish\\CrPre.png', confiden
         f"{date} - There's a problem with Turkish language in presentation \n")  # Write down that something's wrong
 else:
     print('Everything is alright with Turkish language in presentation')
+pyautogui.hotkey('Ctrl', 'w')
 pyautogui.click(pyautogui.locateOnScreen('Pattern\\MainMenu.png', confidence=0.9, grayscale=True))
 
 # Changing the language to Ukrainian
@@ -1201,6 +1291,7 @@ if (pyautogui.locateOnScreen('Pattern\\\Languages\\Ukrainian\\CrDoc.png', confid
     f.write(f"{date} - There's a problem with Ukrainian language in document \n")  # Write down that something's wrong
 else:
     print('Everything is alright with Ukrainian language in document')
+pyautogui.hotkey('Ctrl', 'w')
 pyautogui.click(pyautogui.locateOnScreen('Pattern\\MainMenu.png', confidence=0.9, grayscale=True))
 
 # Creating spreadsheet in Ukrainian
@@ -1213,6 +1304,7 @@ if (pyautogui.locateOnScreen('Pattern\\\Languages\\Ukrainian\\CrSpr.png', confid
         f"{date} - There's a problem with Ukrainian language in spreadsheet \n")  # Write down that something's wrong
 else:
     print('Everything is alright with Ukrainian language in spreadsheet')
+pyautogui.hotkey('Ctrl', 'w')
 pyautogui.click(pyautogui.locateOnScreen('Pattern\\MainMenu.png', confidence=0.9, grayscale=True))
 
 # Creating presentation in Ukrainian
@@ -1225,6 +1317,7 @@ if (pyautogui.locateOnScreen('Pattern\\\Languages\\Ukrainian\\CrPre.png', confid
         f"{date} - There's a problem with Ukrainian language in presentation \n")  # Write down that something's wrong
 else:
     print('Everything is alright with Ukrainian language in presentation')
+pyautogui.hotkey('Ctrl', 'w')
 pyautogui.click(pyautogui.locateOnScreen('Pattern\\MainMenu.png', confidence=0.9, grayscale=True))
 
 # Changing the language to Vietnamese
@@ -1241,6 +1334,7 @@ if (pyautogui.locateOnScreen('Pattern\\\Languages\\Vietnamese\\CrDoc.png', confi
     f.write(f"{date} - There's a problem with Vietnamese language in document \n")  # Write down that something's wrong
 else:
     print('Everything is alright with Vietnamese language in document')
+pyautogui.hotkey('Ctrl', 'w')
 pyautogui.click(pyautogui.locateOnScreen('Pattern\\MainMenu.png', confidence=0.9, grayscale=True))
 
 # Creating spreadsheet in Vietnamese
@@ -1253,6 +1347,7 @@ if (pyautogui.locateOnScreen('Pattern\\\Languages\\Vietnamese\\CrSpr.png', confi
         f"{date} - There's a problem with Vietnamese language in spreadsheet \n")  # Write down that something's wrong
 else:
     print('Everything is alright with Vietnamese language in spreadsheet')
+pyautogui.hotkey('Ctrl', 'w')
 pyautogui.click(pyautogui.locateOnScreen('Pattern\\MainMenu.png', confidence=0.9, grayscale=True))
 
 # Creating presentation in Vietnamese
@@ -1265,6 +1360,7 @@ if (pyautogui.locateOnScreen('Pattern\\\Languages\\Vietnamese\\CrPre.png', confi
         f"{date} - There's a problem with Vietnamese language in presentation \n")  # Write down that something's wrong
 else:
     print('Everything is alright with Vietnamese language in presentation')
+pyautogui.hotkey('Ctrl', 'w')
 pyautogui.click(pyautogui.locateOnScreen('Pattern\\MainMenu.png', confidence=0.9, grayscale=True))
 
 # Changing the language to Chinese
@@ -1281,6 +1377,7 @@ if (pyautogui.locateOnScreen('Pattern\\\Languages\\Chinese\\CrDoc.png', confiden
     f.write(f"{date} - There's a problem with Chinese language in document \n")  # Write down that something's wrong
 else:
     print('Everything is alright with Chinese language in document')
+pyautogui.hotkey('Ctrl', 'w')
 pyautogui.click(pyautogui.locateOnScreen('Pattern\\MainMenu.png', confidence=0.9, grayscale=True))
 
 # Creating spreadsheet in Chinese
@@ -1293,6 +1390,7 @@ if (pyautogui.locateOnScreen('Pattern\\\Languages\\Chinese\\CrSpr.png', confiden
         f"{date} - There's a problem with Chinese language in spreadsheet \n")  # Write down that something's wrong
 else:
     print('Everything is alright with Chinese language in spreadsheet')
+pyautogui.hotkey('Ctrl', 'w')
 pyautogui.click(pyautogui.locateOnScreen('Pattern\\MainMenu.png', confidence=0.9, grayscale=True))
 
 # Creating presentation in Chinese
@@ -1305,6 +1403,7 @@ if (pyautogui.locateOnScreen('Pattern\\\Languages\\Chinese\\CrPre.png', confiden
         f"{date} - There's a problem with Chinese language in presentation \n")  # Write down that something's wrong
 else:
     print('Everything is alright with Chinese language in presentation')
+pyautogui.hotkey('Ctrl', 'w')
 pyautogui.click(pyautogui.locateOnScreen('Pattern\\MainMenu.png', confidence=0.9, grayscale=True))
 
 # Change language back to english
