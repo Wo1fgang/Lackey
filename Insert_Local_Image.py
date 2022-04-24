@@ -11,6 +11,7 @@ pyautogui.PAUSE = 0.7
 time.sleep(2)
 
 
+
 def Insert_Local_Image():
     # Local - Insert tab + Insert Local Image
     def local():

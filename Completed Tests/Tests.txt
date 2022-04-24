@@ -1,0 +1,25 @@
+06.04.2022 21.03.33 - There's a problem with Belarusian language in document 
+06.04.2022 21.03.33 - There's a problem with Belarusian language in presentation 
+06.04.2022 21.04.16 - There's a problem with Chinese language in document 
+07.04.2022 11.18.09 - There's a problem with Bulgarian language in document 
+07.04.2022 11.18.09 - There's a problem with Bulgarian language in document 
+07.04.2022 12.50.45 - There's a problem with Bulgarian language in document 
+07.04.2022 12.50.45 - There's a problem with Catalan language in document 
+07.04.2022 12.50.45 - There's a problem with Czech language in document 
+07.04.2022 12.50.45 - There's a problem with Danish language in document 
+07.04.2022 12.50.45 - There's a problem with English language in document 
+07.04.2022 12.50.45 - There's a problem with Finnish language in document 
+07.04.2022 12.50.45 - There's a problem with French language in document 
+07.04.2022 12.50.45 - There's a problem with Galician language in document 
+07.04.2022 12.50.45 - There's a problem with German language in document 
+07.04.2022 12.50.45 - There's a problem with Greek language in document 
+07.04.2022 12.50.45 - There's a problem with Hungarian language in document 
+07.04.2022 12.53.20 - There's a problem with English language in presentation 
+07.04.2022 12.53.20 - There's a problem with Finnish language in presentation 
+11.04.2022 13.22.24 - 9x9 Table inserted successfully 
+11.04.2022 13.22.34 - URL Image inserted successfully 
+11.04.2022 13.23.11 - Local Image inserted successfully 
+22.04.2022 21.28.12 - URL Image inserted successfully 
+22.04.2022 21.52.49 - There's a problem with Bulgarian language in document 
+22.04.2022 21.52.49 - There's a problem with Bulgarian language in presentation 
+22.04.2022 21.52.49 - There's a problem with Catalan language in document 

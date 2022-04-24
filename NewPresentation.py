@@ -1,17 +1,24 @@
 import pyautogui
 import time
+import os
 
 pyautogui.PAUSE = 0.5
 
+project_folder = os.getcwd()
+
 
 def CrtNewPresentation():
-    if (pyautogui.locateOnScreen('Pattern\\NewPresentation.png', confidence=0.9)) is None:
+    if (pyautogui.locateOnScreen(f'{project_folder}/Pattern/NewPresentation.png', confidence=0.9,
+                                 grayscale=True)) is None:
         pyautogui.click(
-            pyautogui.locateOnScreen('Pattern\\MainMenu.png', confidence=0.9))
-        pyautogui.click(pyautogui.locateOnScreen('Pattern\\NewPresentation.png'))
+            pyautogui.locateOnScreen(f'{project_folder}/Pattern/MainMenu.png', confidence=0.9,
+                                     grayscale=True))
+        pyautogui.click(pyautogui.locateOnScreen(f'{project_folder}/Pattern/NewPresentation.png', confidence=0.9,
+                                                 grayscale=True))
     else:
         pyautogui.click(
-            pyautogui.locateOnScreen('Pattern\\NewPresentation.png', confidence=0.9))
+            pyautogui.locateOnScreen(f'{project_folder}Pattern/NewPresentation.png', confidence=0.9,
+                                     grayscale=True))
     time.sleep(4)
 
 
