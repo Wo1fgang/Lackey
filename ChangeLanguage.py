@@ -66,7 +66,8 @@ def ChangeLang():
     Buttons.tab()
     Buttons.tab()
     Buttons.tab()
-    Buttons.tab()
+    if os.name == "nt":
+        Buttons.tab()
     Buttons.enter()
 
 
@@ -130,7 +131,8 @@ Buttons.tab()
 Buttons.tab()
 Buttons.tab()
 Buttons.tab()
-Buttons.tab()
+if os.name == "nt":
+    Buttons.tab()
 Buttons.enter()
 
 for lang in languages:
