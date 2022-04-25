@@ -9,8 +9,8 @@ import NewDocument
 import NewSpreadsheet
 import NewPresentation
 
-os.startfile("C:\\Program Files\\ONLYOFFICE\\DesktopEditors\\DesktopEditors.exe")  # Launching DesktopEditor
-time.sleep(8)
+# os.startfile("C:\\Program Files\\ONLYOFFICE\\DesktopEditors\\DesktopEditors.exe")  # Launching DesktopEditor
+# time.sleep(8)
 
 project_folder = os.getcwd()
 
@@ -71,7 +71,7 @@ def ChangeLang():
 
 
 def CheckLanguage(languages):
-    #Creating Document in {languages}
+    # Creating Document in {languages}
     NewDocument.CrtNewDoc()
     time.sleep(4)
     if (pyautogui.locateOnScreen(f'{project_folder}/Pattern/Languages/{languages}/CrDoc.png', confidence=0.9,
@@ -86,7 +86,7 @@ def CheckLanguage(languages):
     # Creating Spreadsheet in {languages}
     NewSpreadsheet.CrtNewSpreadsheet()
     time.sleep(4)
-    if (pyautogui.locateOnScreen(f'Pattern/Languages/{languages}/CrSpr.png', confidence=0.9,
+    if (pyautogui.locateOnScreen(f'{project_folder}/Pattern/Languages/{languages}/CrSpr.png', confidence=0.9,
                                  grayscale=True)) is None:
         f = open(f'{project_folder}/Completed Tests/Tests.txt', 'a')  # Open Tests.txt
         f.write(
@@ -95,20 +95,19 @@ def CheckLanguage(languages):
         print(f'Everything is alright with {languages} language in spreadsheet')
     pyautogui.hotkey('Ctrl', 'w')
 
-    #Creating Presentation in {languages}
+    # Creating Presentation in {languages}
     NewPresentation.CrtNewPresentation()
     time.sleep(4)
-    if (pyautogui.locateOnScreen(f'Pattern/Languages/{languages}/CrPre.png', confidence=0.9,
+    if (pyautogui.locateOnScreen(f'{project_folder}/Pattern/Languages/{languages}/CrPre.png', confidence=0.9,
                                  grayscale=True)) is None:
         f = open(f'{project_folder}/Completed Tests/Tests.txt', 'a')  # Open Tests.txt
-        f.write(
-            f"{date} - There's a problem with {languages} language in presentation \n")  # Write down that something's wrong
+        f.write(f"{date} - There's a problem with {languages} language in presentation \n")  # Write down that something's wrong
     else:
         print(f'Everything is alright with {languages} language in presentation')
     pyautogui.hotkey('Ctrl', 'w')
 
     pyautogui.click(
-        pyautogui.locateOnScreen(f'Pattern/Languages/{languages}/Settings.png', confidence=0.9, grayscale=True))
+        pyautogui.locateOnScreen(f'{project_folder}/Pattern/Languages/{languages}/Settings.png', confidence=0.9, grayscale=True))
     ChangeLang()
 
 
@@ -133,7 +132,6 @@ Buttons.tab()
 Buttons.tab()
 Buttons.tab()
 Buttons.enter()
-
 
 for lang in languages:
     CheckLanguage(lang)
