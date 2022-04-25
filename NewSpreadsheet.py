@@ -8,17 +8,13 @@ project_folder = os.getcwd()
 
 
 def CrtNewSpreadsheet():
-    if (pyautogui.locateOnScreen(f'{project_folder}/Pattern/NewSpreadsheet.png', confidence=0.9,
-                                 grayscale=True)) is None:
+    if (pyautogui.locateOnScreen(f'{project_folder}/Pattern/NewSpreadsheet.png', confidence=0.9)) is None:
         pyautogui.click(
-            pyautogui.locateOnScreen(f'{project_folder}/Pattern/MainMenu.png', confidence=0.9,
-                                     grayscale=True))
-        pyautogui.click(pyautogui.locateOnScreen(f'{project_folder}/Pattern/NewSpreadsheet.png', confidence=0.9,
-                                                 grayscale=True))
+            pyautogui.locateOnScreen(f'{project_folder}/Pattern/MainMenu.png', confidence=0.9))
+        pyautogui.click(pyautogui.locateOnScreen(f'{project_folder}/Pattern/NewSpreadsheet.png', confidence=0.9))
     else:
         pyautogui.click(
-            pyautogui.locateOnScreen(f'{project_folder}/Pattern/NewSpreadsheet.png', confidence=0.9,
-                                     grayscale=True))
+            pyautogui.locateOnScreen(f'{project_folder}/Pattern/NewSpreadsheet.png', confidence=0.9))
     time.sleep(4)
 
 

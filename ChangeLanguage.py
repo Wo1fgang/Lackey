@@ -115,8 +115,7 @@ def CheckLanguage(languages):
 # Checking and changing to Belarusian language
 if (pyautogui.locateOnScreen(f'{project_folder}/Pattern/Settings.png', confidence=0.9,
                              grayscale=True)) is None:
-    print('You need to change language to english')
-    sys.exit()
+    pyautogui.click(pyautogui.locateOnScreen(f'{project_folder}/Pattern/MainMenu.png', confidence=0.9, grayscale=True))
 else:
     pyautogui.click(pyautogui.locateOnScreen(f'{project_folder}/Pattern/Settings.png', confidence=0.9, grayscale=True))
 Buttons.tab()
