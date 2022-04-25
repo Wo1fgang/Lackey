@@ -4,6 +4,8 @@ from datetime import datetime
 import Buttons
 import time
 import os
+import c
+
 pyautogui.PAUSE = 0.8
 
 project_folder = os.getcwd()
@@ -12,8 +14,8 @@ project_folder = os.getcwd()
 time.sleep(1)
 
 def Insert_URL_Image():
-    if pyautogui.click(pyautogui.locateOnScreen(f'{project_folder}/Pattern/Insert.png', confidence=0.8)) is None:
-        pyautogui.click(pyautogui.locateOnScreen(f'{project_folder}/Pattern/Insert2.png', confidence=0.8))
+    if c.click('Insert') is None:
+        c.click('Insert2')
     pyautogui.press('alt')
     pyautogui.press('i')
     pyautogui.press('e')

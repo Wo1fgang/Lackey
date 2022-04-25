@@ -9,27 +9,29 @@ import NewDocument
 os.startfile("C:\\Program Files\\ONLYOFFICE\\DesktopEditors\\DesktopEditors.exe") # Launching DesktopEditor
 time.sleep(8)
 
+project_folder = os.getcwd()
+
 pyautogui.PAUSE = 0.5
 
 date = datetime.now().strftime("%d.%m.%Y %H.%M.%S")  # date = Current date in "d.m.Y H.M.S" format
 
 # Changing username
-pyautogui.click(pyautogui.locateOnScreen('Pattern\\Settings.png', confidence=0.9, grayscale=True))
+pyautogui.click(pyautogui.locateOnScreen(f'{project_folder}/Pattern/Settings.png', confidence=0.9, grayscale=True))
 Buttons.tab()
 pyperclip.copy('Some text to check if changing username works')
 pyautogui.hotkey('Ctrl', 'v')
-pyautogui.click(pyautogui.locateOnScreen('Pattern\\Apply.png', confidence=0.9, grayscale=True))
+pyautogui.click(pyautogui.locateOnScreen(f'{project_folder}/Pattern/Apply.png', confidence=0.9, grayscale=True))
 
-if (pyautogui.locateOnScreen('Pattern\\ChangedUsername.png', confidence=0.9,
+if (pyautogui.locateOnScreen(f'{project_folder}/Pattern/ChangedUsername.png', confidence=0.9,
                              grayscale=True)) is None:
-    f = open('Completed Tests\\Tests.txt', 'a')  # Open Tests.txt
+    f = open(f'{project_folder}/Completed Tests/Tests.txt', 'a')  # Open Tests.txt
     f.write(f"{date} - There's a problem with changing username \n")  # Write down that something's wrong
 else:
-    f = open('Completed Tests\\Tests.txt', 'a')
+    f = open(f'{project_folder}/Completed Tests/Tests.txt', 'a')
     f.write(f"{date} - Username changed successfully \n")  # Same if everything is alright
 
-pyautogui.click(pyautogui.locateOnScreen('Pattern\\ResetToDefault.png', confidence=0.9, grayscale=True))
-pyautogui.click(pyautogui.locateOnScreen('Pattern\\Apply.png', confidence=0.9, grayscale=True))
+pyautogui.click(pyautogui.locateOnScreen(f'{project_folder}/Pattern/ResetToDefault.png', confidence=0.9, grayscale=True))
+pyautogui.click(pyautogui.locateOnScreen(f'{project_folder}/Pattern/Apply.png', confidence=0.9, grayscale=True))
 
 
 # Changing interface scaling

@@ -3,6 +3,7 @@ import time
 from datetime import datetime  # Library used to get current time
 import Buttons  # Importing Buttons.py to quickly use necessary buttonpresses
 import os
+import c
 
 pyautogui.PAUSE = 0.5
 
@@ -13,10 +14,9 @@ project_folder = os.getcwd()
 
 def Insert_Table():  # defining function so we can import it into Everything.py
     # pyautogui.click(pyautogui.locateOnScreen('Pattern\\Insert.png', confidence=0.9, grayscale=True))  # Click on "Insert" tab
-    #
     # # INSERTING 9x9 TABLE
-    # pyautogui.click(pyautogui.locateOnScreen('Pattern\\Table.png', confidence=0.9, grayscale=True))  # Insert table
-    # pyautogui.click(pyautogui.locateOnScreen('Pattern\\InsertCustomTable.png', confidence=0.9, grayscale=True))  # "Insert Custom Table"
+    if c.click('Insert') is None:
+        c.click('Insert2')
     pyautogui.press('alt')
     pyautogui.press('i')
     pyautogui.press('d')
