@@ -25,9 +25,10 @@ def Insert_URL_Image():
     pyperclip.copy('https://i.redd.it/or438ov4zno81.jpg')
     pyautogui.hotkey('Ctrl', 'v')  # Insert Image URL
     Buttons.enter()
-    if (pyautogui.locateOnScreen(f'{project_folder}/Pattern/ErrorURL.png', confidence=0.8)) is None:
+    if (pyautogui.locateOnScreen(f'{project_folder}/Pattern/ErrorURL.png', confidence=0.8)) is not None:
         pyautogui.press('Escape')  # Escape from active image
         print("something is wrong with clipboard, couldn't paste URL")
+    Buttons.escape()
     Buttons.right()
     Buttons.enter()  # Next Line
 
