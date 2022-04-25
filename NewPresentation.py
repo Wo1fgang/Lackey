@@ -17,7 +17,7 @@ def CrtNewPresentation():
                                                  grayscale=True))
     else:
         pyautogui.click(
-            pyautogui.locateOnScreen(f'{project_folder}Pattern/NewPresentation.png', confidence=0.9,
+            pyautogui.locateOnScreen(f'{project_folder}/Pattern/NewPresentation.png', confidence=0.9,
                                      grayscale=True))
     time.sleep(4)
 

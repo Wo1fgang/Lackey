@@ -17,7 +17,7 @@ def CrtNewSpreadsheet():
                                                  grayscale=True))
     else:
         pyautogui.click(
-            pyautogui.locateOnScreen(f'{project_folder}Pattern/NewSpreadsheet.png', confidence=0.9,
+            pyautogui.locateOnScreen(f'{project_folder}/Pattern/NewSpreadsheet.png', confidence=0.9,
                                      grayscale=True))
     time.sleep(4)
 
