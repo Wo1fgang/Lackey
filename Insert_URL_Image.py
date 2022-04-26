@@ -8,6 +8,7 @@ import c
 import csv
 import sys
 import GoFullscreen
+import NewDocument
 
 test = os.path.basename(__file__)
 
@@ -21,7 +22,9 @@ time.sleep(1)
 GoFullscreen.goFullScreen()
 
 
+
 def Insert_URL_Image():
+    NewDocument.CrtNewDoc()
     if pyautogui.click(pyautogui.locateOnScreen(f'{project_folder}/Pattern/Insert.png', confidence=0.9)) is None:
         c.click('Insert2')
     pyautogui.press('alt')
@@ -53,6 +56,9 @@ def Insert_URL_Image():
         with open('Completed Tests.csv', 'a', newline='') as csvfile:
             writer = csv.writer(csvfile, delimiter=' ')
             writer.writerow([f"{date}, {test}, SUCCESS"])
+    pyautogui.hotkey('Ctrl', 'w')
+    Buttons.tab()
+    Buttons.enter()
 
 
 if __name__ == "__main__":

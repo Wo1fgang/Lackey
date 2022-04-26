@@ -11,8 +11,6 @@ import os # Library used to launch desktop
 #
 # time.sleep(8) # Wait 8 seconds
 
-CrtNewDoc() # Creating new document
-
 Insert_Table() # Inserting 9x9 table
 
 Insert_URL_Image() # Inserting image from URL

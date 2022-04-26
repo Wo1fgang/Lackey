@@ -6,6 +6,7 @@ import os
 import c
 import csv
 import GoFullscreen
+import NewDocument
 
 pyautogui.PAUSE = 0.5
 
@@ -18,8 +19,7 @@ test = os.path.basename(__file__)
 GoFullscreen.goFullScreen()
 
 def Insert_Table():  # defining function so we can import it into Everything.py
-    # pyautogui.click(pyautogui.locateOnScreen('Pattern\\Insert.png', confidence=0.9, grayscale=True))  # Click on "Insert" tab
-    # # INSERTING 9x9 TABLE
+    NewDocument.CrtNewDoc()
     if pyautogui.click(pyautogui.locateOnScreen(f'{project_folder}/Pattern/Insert.png', confidence=0.9)) is None:
         c.click('Insert2')
     pyautogui.press('alt')
@@ -52,6 +52,9 @@ def Insert_Table():  # defining function so we can import it into Everything.py
             writer = csv.writer(csvfile, delimiter=' ')
             writer.writerow([f"{date}, {test}, SUCCESS"])
 
+    pyautogui.hotkey('Ctrl', 'w')
+    Buttons.tab()
+    Buttons.enter()
 
 if __name__ == "__main__":
     Insert_Table()

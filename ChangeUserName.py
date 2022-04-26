@@ -24,6 +24,8 @@ GoFullscreen.goFullScreen()
 if pyautogui.locateOnScreen(f'{project_folder}/Pattern/Settings.png', confidence=0.9, grayscale=True) is None:
     c.click('MainMenu')
     c.click('Settings')
+else:
+    c.click('Settings')
 Buttons.tab()
 pyperclip.copy('Some text to check if changing username works')
 pyautogui.hotkey('Ctrl', 'v')

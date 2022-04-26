@@ -7,6 +7,7 @@ import Buttons
 import GoFullscreen
 import c
 import csv
+import NewDocument
 
 GoFullscreen.goFullScreen()
 
@@ -18,9 +19,17 @@ project_folder = os.getcwd()
 
 test = os.path.basename(__file__)
 
+LocalImage = ["JPG.jpg",
+              "BMP.bmp",
+              "PNG.png",
+              "TIFF.tiff",
+              "GIF.gif"]
+
 
 def Insert_Local_Image():
     # Local - Insert tab + Insert Local Image
+    NewDocument.CrtNewDoc()
+
     def local():
         # INSERTING LOCAL IMAGE
         if pyautogui.click(pyautogui.locateOnScreen(f'{project_folder}/Pattern/Insert.png', confidence=0.9)) is None:
@@ -40,25 +49,16 @@ def Insert_Local_Image():
         Buttons.right()
         # pyautogui.press('Enter')  # Next Line
 
-    local()
-    pyperclip.copy('C:\Lackey\Pattern\Images\small images\JPG.jpg')
-    ii()
+    def CheckLocal(LI):
+        local()
+        if os.name == "nt":
+            pyperclip.copy(f'{project_folder}\Pattern\Images\small images\{LI}')
+        else:
+            pyperclip.copy(f'{project_folder}/Pattern/Images/small images/{LI}')
+        ii()
 
-    local()
-    pyperclip.copy('C:\Lackey\Pattern\Images\small images\BMP.bmp')
-    ii()
-
-    local()
-    pyperclip.copy('C:\Lackey\Pattern\Images\small images\PNG.png')
-    ii()
-
-    local()
-    pyperclip.copy('C:\Lackey\Pattern\Images\small images\TIFF.tiff')
-    ii()
-
-    local()
-    pyperclip.copy('C:\Lackey\Pattern\Images\small images\GIF.gif')
-    ii()
+    for LI in LocalImage:
+        CheckLocal(LI)
 
     date = datetime.now().strftime("%d.%m.%Y %H.%M.%S")
 
@@ -73,6 +73,10 @@ def Insert_Local_Image():
         with open('Completed Tests.csv', 'a', newline='') as csvfile:
             writer = csv.writer(csvfile, delimiter=' ')
             writer.writerow([f"{date}, {test}, SUCCESS"])
+
+    pyautogui.hotkey('Ctrl', 'w')
+    Buttons.tab()
+    Buttons.enter()
 
 
 if __name__ == "__main__":
