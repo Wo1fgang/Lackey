@@ -25,13 +25,13 @@ LocalImage = ["JPG.jpg",
               "TIFF.tiff",
               "GIF.gif"]
 
+date = datetime.now().strftime("%d.%m.%Y %H.%M.%S")
 
 def Insert_Local_Image():
     # Local - Insert tab + Insert Local Image
-    NewDocument.CrtNewDoc()
-
     def local():
         # INSERTING LOCAL IMAGE
+        NewDocument.CrtNewDoc()
         if pyautogui.click(pyautogui.locateOnScreen(f'{project_folder}/Pattern/Insert.png', confidence=0.9)) is None:
             c.click('Insert2')
         pyautogui.press('alt')
@@ -47,6 +47,22 @@ def Insert_Local_Image():
         Buttons.enter()
         Buttons.escape()  # Escape from active image
         Buttons.right()
+
+        if (pyautogui.locateOnScreen(f'{project_folder}/Pattern/Images/small images/{LI}',
+                                     confidence=0.9, grayscale=True)) is None:
+            pyautogui.screenshot(f'{project_folder}/Completed Tests/Failed/Image/Local/{date}.png')
+            with open('Completed Tests.csv', 'a', newline='') as csvfile:
+                writer = csv.writer(csvfile, delimiter=' ')
+                writer.writerow([f"{date}', {LI}, FAILED"])
+            print("There's a problem with inserting local image")
+        else:
+            with open('Completed Tests.csv', 'a', newline='') as csvfile:
+                writer = csv.writer(csvfile, delimiter=' ')
+                writer.writerow([f"{date}, {LI}, SUCCESS"])
+
+        pyautogui.hotkey('Ctrl', 'w')
+        Buttons.tab()
+        Buttons.enter()
         # pyautogui.press('Enter')  # Next Line
 
     def CheckLocal(LI):
@@ -59,24 +75,6 @@ def Insert_Local_Image():
 
     for LI in LocalImage:
         CheckLocal(LI)
-
-    date = datetime.now().strftime("%d.%m.%Y %H.%M.%S")
-
-    if (pyautogui.locateOnScreen(f'{project_folder}/Pattern/Images/small images/Correct.png',
-                                 confidence=0.9, grayscale=True)) is None:
-        pyautogui.screenshot(f'{project_folder}/Completed Tests/Failed/Image/Local/{date}.png')
-        with open('Completed Tests.csv', 'a', newline='') as csvfile:
-            writer = csv.writer(csvfile, delimiter=' ')
-            writer.writerow([f"{date}', {test}, FAILED"])
-        print("There's a problem with inserting local image")
-    else:
-        with open('Completed Tests.csv', 'a', newline='') as csvfile:
-            writer = csv.writer(csvfile, delimiter=' ')
-            writer.writerow([f"{date}, {test}, SUCCESS"])
-
-    pyautogui.hotkey('Ctrl', 'w')
-    Buttons.tab()
-    Buttons.enter()
 
 
 if __name__ == "__main__":
