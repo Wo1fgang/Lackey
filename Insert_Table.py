@@ -4,6 +4,8 @@ from datetime import datetime  # Library used to get current time
 import Buttons  # Importing Buttons.py to quickly use necessary buttonpresses
 import os
 import c
+import csv
+import GoFullscreen
 
 pyautogui.PAUSE = 0.5
 
@@ -11,11 +13,14 @@ time.sleep(2)
 
 project_folder = os.getcwd()
 
+test = os.path.basename(__file__)
+
+GoFullscreen.goFullScreen()
 
 def Insert_Table():  # defining function so we can import it into Everything.py
     # pyautogui.click(pyautogui.locateOnScreen('Pattern\\Insert.png', confidence=0.9, grayscale=True))  # Click on "Insert" tab
     # # INSERTING 9x9 TABLE
-    if c.click('Insert') is None:
+    if pyautogui.click(pyautogui.locateOnScreen(f'{project_folder}/Pattern/Insert.png', confidence=0.9)) is None:
         c.click('Insert2')
     pyautogui.press('alt')
     pyautogui.press('i')
@@ -33,16 +38,19 @@ def Insert_Table():  # defining function so we can import it into Everything.py
         i += 1
     Buttons.enter()  # Next line
 
-    date = datetime.now().strftime("%d.%m.%Y %H.%M.%S") # date = Current date in "d.m.Y H.M.S" format
+    date = datetime.now().strftime("%d.%m.%Y %H.%M.%S")  # date = Current date in "d.m.Y H.M.S" format
 
-    if (pyautogui.locateOnScreen(f'{project_folder}/Pattern/CreatedTable.png', confidence=0.9, grayscale=True)) is None: # If we can't locate created table, if something's gone wrong
-        pyautogui.screenshot(f'{project_folder}/Completed Tests/Failed/Table/{date}.png') # We take screenshot with date in name
-        f = open(f'{project_folder}/Completed Tests/Tests.txt', 'a') # Open Tests.txt
-        f.write(f"{date} - There's a problem with inserting table \n") # Write down that something's wrong
+    if (pyautogui.locateOnScreen(f'{project_folder}/Pattern/CreatedTable.png', confidence=0.9, grayscale=True)) is None:
+        pyautogui.screenshot(f'{project_folder}/Completed Tests/Failed/Table/{date}.png')
+        with open('Completed Tests.csv', 'a', newline='') as csvfile:
+            writer = csv.writer(csvfile, delimiter=' ')
+            writer.writerow([f"{date}', {test}, FAILED"])
+        print("There's a problem with inserting 9x9 table")
     else:
-        pyautogui.screenshot(f'{project_folder}/Completed Tests/Success/Table/{date}.png')
-        f = open(f'{project_folder}/Completed Tests/Tests.txt', 'a')
-        f.write(f"{date} - 9x9 Table inserted successfully \n") # Same if everything is alright
+        pyautogui.screenshot(f'{project_folder}/Completed Tests/Success/Image/URL/{date}.png')
+        with open('Completed Tests.csv', 'a', newline='') as csvfile:
+            writer = csv.writer(csvfile, delimiter=' ')
+            writer.writerow([f"{date}, {test}, SUCCESS"])
 
 
 if __name__ == "__main__":

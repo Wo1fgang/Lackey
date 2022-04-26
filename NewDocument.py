@@ -2,11 +2,14 @@ import pyautogui
 import time
 import os
 import c
+import GoFullscreen
 
+GoFullscreen.goFullScreen()
 
 pyautogui.PAUSE = 0.5
 
 project_folder = os.getcwd()
+
 
 
 def CrtNewDoc():

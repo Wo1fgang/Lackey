@@ -2,6 +2,9 @@ import pyautogui
 import time
 import os
 import c
+import GoFullscreen
+
+GoFullscreen.goFullScreen()
 
 pyautogui.PAUSE = 0.5
 
