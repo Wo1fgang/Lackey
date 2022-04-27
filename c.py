@@ -7,6 +7,8 @@ project_folder = os.getcwd()
 
 p = str
 
+pyautogui.PAUSE = 0.8
+
 
 def click(p):
     if pyautogui.locateOnScreen(f'{project_folder}/Pattern/{p}.png', confidence=0.9) is None:

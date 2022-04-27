@@ -3,6 +3,9 @@ import time
 import os
 import c
 import GoFullscreen
+import Change_Theme
+
+Change_Theme.ChangeThemeToLight()
 
 GoFullscreen.goFullScreen()
 

@@ -19,13 +19,14 @@ project_folder = os.getcwd()
 
 test = os.path.basename(__file__)
 
-LocalImage = ["JPG.jpg",
-              "BMP.bmp",
-              "PNG.png",
-              "TIFF.tiff",
-              "GIF.gif"]
+Formats = ["JPG.jpg",
+           "BMP.bmp",
+           "PNG.png",
+           "TIFF.tiff",
+           "GIF.gif"]
 
 date = datetime.now().strftime("%d.%m.%Y %H.%M.%S")
+
 
 def Insert_Local_Image():
     # Local - Insert tab + Insert Local Image
@@ -48,33 +49,33 @@ def Insert_Local_Image():
         Buttons.escape()  # Escape from active image
         Buttons.right()
 
-        if (pyautogui.locateOnScreen(f'{project_folder}/Pattern/Images/small images/{LI}',
+        if (pyautogui.locateOnScreen(f'{project_folder}/Pattern/Images/small images/{localimage}',
                                      confidence=0.9, grayscale=True)) is None:
             pyautogui.screenshot(f'{project_folder}/Completed Tests/Failed/Image/Local/{date}.png')
             with open('Completed Tests.csv', 'a', newline='') as csvfile:
                 writer = csv.writer(csvfile, delimiter=' ')
-                writer.writerow([f"{date}', {LI}, FAILED"])
+                writer.writerow([f"{date}',{test} {localimage}, FAILED"])
             print("There's a problem with inserting local image")
         else:
             with open('Completed Tests.csv', 'a', newline='') as csvfile:
                 writer = csv.writer(csvfile, delimiter=' ')
-                writer.writerow([f"{date}, {LI}, SUCCESS"])
+                writer.writerow([f"{date},{test} {localimage}, SUCCESS"])
 
         pyautogui.hotkey('Ctrl', 'w')
         Buttons.tab()
         Buttons.enter()
         # pyautogui.press('Enter')  # Next Line
 
-    def CheckLocal(LI):
+    def CheckLocal(localimage):
         local()
         if os.name == "nt":
-            pyperclip.copy(f'{project_folder}\Pattern\Images\small images\{LI}')
+            pyperclip.copy(f'{project_folder}\Pattern\Images\small images\{localimage}')
         else:
-            pyperclip.copy(f'{project_folder}/Pattern/Images/small images/{LI}')
+            pyperclip.copy(f'{project_folder}/Pattern/Images/small images/{localimage}')
         ii()
 
-    for LI in LocalImage:
-        CheckLocal(LI)
+    for localimage in Formats:
+        CheckLocal(localimage)
 
 
 if __name__ == "__main__":

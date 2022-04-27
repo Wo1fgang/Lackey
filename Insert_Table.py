@@ -18,6 +18,7 @@ test = os.path.basename(__file__)
 
 GoFullscreen.goFullScreen()
 
+
 def Insert_Table():  # defining function so we can import it into Everything.py
     NewDocument.CrtNewDoc()
     if pyautogui.click(pyautogui.locateOnScreen(f'{project_folder}/Pattern/Insert.png', confidence=0.9)) is None:

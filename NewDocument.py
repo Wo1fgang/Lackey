@@ -3,13 +3,15 @@ import time
 import os
 import c
 import GoFullscreen
+import Change_Theme
+
+Change_Theme.ChangeThemeToLight()
 
 GoFullscreen.goFullScreen()
 
 pyautogui.PAUSE = 0.5
 
 project_folder = os.getcwd()
-
 
 
 def CrtNewDoc():
@@ -19,6 +21,7 @@ def CrtNewDoc():
     else:
         c.click('NewDocument')
     time.sleep(4)
+
 
 if __name__ == "__main__":
     CrtNewDoc()
