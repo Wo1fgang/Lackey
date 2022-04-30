@@ -5,7 +5,7 @@ import pyperclip  # Library for copypasting stuff
 from datetime import datetime
 import Buttons
 import GoFullscreen
-import c
+import clicker
 import csv
 import NewDocument
 
@@ -19,11 +19,16 @@ project_folder = os.getcwd()
 
 test = os.path.basename(__file__)
 
-Formats = ["JPG.jpg",
-           "BMP.bmp",
-           "PNG.png",
-           "TIFF.tiff",
-           "GIF.gif"]
+Formats = ["jpg.jpg",
+           "bmp.bmp",
+           "png.png",
+           "tiff.tiff",
+           "gif.gif",
+           "JPG_.JPG",
+           "BMP_.BMP",
+           "PNG_.PNG",
+           "TIFF_.TIFF",
+           "GIF_.GIF"]
 
 date = datetime.now().strftime("%d.%m.%Y %H.%M.%S")
 
@@ -34,7 +39,7 @@ def Insert_Local_Image():
         # INSERTING LOCAL IMAGE
         NewDocument.CrtNewDoc()
         if pyautogui.click(pyautogui.locateOnScreen(f'{project_folder}/Pattern/Insert.png', confidence=0.9)) is None:
-            c.click('Insert2')
+            clicker.click('Insert2')
         pyautogui.press('alt')
         pyautogui.press('i')
         pyautogui.press('e')
@@ -55,11 +60,12 @@ def Insert_Local_Image():
             with open('Completed Tests.csv', 'a', newline='') as csvfile:
                 writer = csv.writer(csvfile, delimiter=' ')
                 writer.writerow([f"{date}',{test} {localimage}, FAILED"])
-            print("There's a problem with inserting local image")
+            print(f"{date}',{test} {localimage}, FAILED")
         else:
             with open('Completed Tests.csv', 'a', newline='') as csvfile:
                 writer = csv.writer(csvfile, delimiter=' ')
                 writer.writerow([f"{date},{test} {localimage}, SUCCESS"])
+            print(f"{date},{test} {localimage}, SUCCESS")
 
         pyautogui.hotkey('Ctrl', 'w')
         Buttons.tab()

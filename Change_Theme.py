@@ -1,7 +1,7 @@
 import pyautogui
 import os
 
-import c
+import clicker
 
 project_folder = os.getcwd()
 
@@ -11,7 +11,7 @@ pyautogui.PAUSE = 0.8
 def ChangeThemeToLight():
     if pyautogui.locateOnScreen(f'{project_folder}/Pattern/MainMenu.png', confidence=0.9) is None:
         pyautogui.click(pyautogui.locateOnScreen(f'{project_folder}/Pattern/MainMenuDark.png', confidence=0.9))
-        c.click("SettingsDark")
+        clicker.click("SettingsDark")
         for _ in range(5):
             pyautogui.press('Tab')
         pyautogui.press('Down')

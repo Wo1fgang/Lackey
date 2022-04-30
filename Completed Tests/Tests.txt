@@ -23,3 +23,13 @@
 22.04.2022 21.52.49 - There's a problem with Bulgarian language in document 
 22.04.2022 21.52.49 - There's a problem with Bulgarian language in presentation 
 22.04.2022 21.52.49 - There's a problem with Catalan language in document 
+25.04.2022 17.02.31 - 9x9 Table inserted successfully 
+25.04.2022 17.02.40 - URL Image inserted successfully 
+25.04.2022 17.04.24 - URL Image inserted successfully 
+25.04.2022 17.05.11 - URL Image inserted successfully 
+25.04.2022 17.05.53 - URL Image inserted successfully 
+26.04.2022 17.45.15 - There's a problem with changing username 
+26.04.2022 17.46.32 - There's a problem with changing username 
+26.04.2022 17.46.57 - Username changed successfully 
+26.04.2022 17.47.37 - Username changed successfully 
+27.04.2022 22.57.19 - There's a problem with Belarusian language in spreadsheet 

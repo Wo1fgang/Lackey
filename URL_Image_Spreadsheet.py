@@ -4,11 +4,11 @@ from datetime import datetime  # Get current time
 import Buttons  # Script to easily tell which buttons to press (pyautogui.press still can be used)
 import time  # Used to "pause" execution of script
 import os  # Interaction with operational system
-import c  # Script c.py, to easily click on any button from screenshot and stop the script if it can't find that button
+import clicker  # Script clicker.py, to easily click on button from screenshot and stop the script if it can't find it
 import csv  # Export results into csv
 import sys  # Interaction with scripts (in that case, sys.exit, to stop execution of script if something is wrong
 import GoFullscreen  # Script that enables full-screen on OO Editor, just in case
-import NewDocument  # Script that creates new document
+import NewSpreadsheet # Script that creates new Spreadsheet
 
 test = os.path.basename(__file__)  # name of this script = variable "test". Used for easy reading the csv with results.
 
@@ -20,11 +20,14 @@ GoFullscreen.goFullScreen()  # fail-safe in case OO Editor is not in full-screen
 
 date = datetime.now().strftime("%d.%m.%Y %H.%M.%S")  # date = current date in form of dd.mm.yy hh.mm.ss
 
-def Insert_URL_Image():  # creating function
-    NewDocument.CrtNewDoc()  # Creating new document
+
+def Insert_URL_Image_SPR():  # creating function
+    NewSpreadsheet.CrtNewSpreadsheet()  # Creating new document
+    if pyautogui.click(pyautogui.locateOnScreen(f'{project_folder}/Pattern/Insert.png', confidence=0.9)) is None:
+        clicker.click('Insert2')
     pyautogui.press('alt')  # Pressing "alt" to get into shortcut mode (that's just easier)
     pyautogui.press('i')  # Going into "Insert" tab
-    pyautogui.press('e')  # Choosing "Image"
+    pyautogui.press('d')  # Choosing "Image"
     Buttons.down()
     Buttons.down()  # Choosing insert from URL
     Buttons.enter()  # Pressing OK
@@ -44,11 +47,8 @@ def Insert_URL_Image():  # creating function
 
     else:  # If everything is ok and we inserted the image from URL
         Buttons.escape()  # Escaping from just inserted image
-        pyautogui.hotkey('Ctrl', 'w')  # Closing the document
-        Buttons.tab()  # In opened "save the changes" window switch to "No"
-        Buttons.enter()  # Press enter
 
-        if (pyautogui.locateOnScreen(f'{project_folder}/Pattern/InsertedURLImage.png',
+        if (pyautogui.locateOnScreen(f'{project_folder}/Pattern/InsertedURLImageSpreadsheet.png',
                                      confidence=0.9, grayscale=True)) is None:
             # If our inserted image is not the same as we expected:
 
@@ -58,12 +58,16 @@ def Insert_URL_Image():  # creating function
             with open('Completed Tests.csv', 'a', newline='') as csvfile:  # Open "Completed Tests.csv"
                 writer = csv.writer(csvfile, delimiter=' ')
                 writer.writerow([f"{date}', {test}, FAILED"])  # Write date, test and result
-            print("There's a problem with inserting image from URL") # Print to console that something's wrong
+            print(f"{date}', {test}, FAILED")  # Print to console that something's wrong
         else:  # If everything's alright:
             with open('Completed Tests.csv', 'a', newline='') as csvfile:  # Open "Completed Tests.csv"
                 writer = csv.writer(csvfile, delimiter=' ')
                 writer.writerow([f"{date}, {test}, SUCCESS"])  # Write date, test and result
+            print(f"{date}, {test}, SUCCESS")
+    pyautogui.hotkey('Ctrl', 'w')  # Closing the document
+    Buttons.tab()  # In opened "save the changes" window switch to "No"
+    Buttons.enter()  # Press enter
 
 
 if __name__ == "__main__":  # Fail-safe so that this script would not run when we import in into Everything.py
-    Insert_URL_Image()
+    Insert_URL_Image_SPR()

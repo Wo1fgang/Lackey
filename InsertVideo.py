@@ -5,7 +5,7 @@ import pyperclip  # Library for copypasting stuff
 from datetime import datetime
 import Buttons
 import GoFullscreen
-import c
+import clicker
 import csv
 import NewPresentation
 import Change_Theme
@@ -25,7 +25,7 @@ def InsertVideo():
     NewPresentation.CrtNewPresentation()
     pyautogui.press("alt")
     pyautogui.press("i")
-    c.click("Video")
+    clicker.click("Video")
     if os.name == "nt":
         pyperclip.copy(f'{project_folder}\Pattern\ video.mp4')
     else:
@@ -33,7 +33,7 @@ def InsertVideo():
     pyautogui.hotkey("ctrl", "v")
     Buttons.enter()
     pyautogui.click(pyautogui.locateOnScreen(f'{project_folder}/Pattern/InsertedVideo.png', confidence=0.9))
-    c.click("InsertedVideo")
+    clicker.click("InsertedVideo")
     time.sleep(1)
 
     date = datetime.now().strftime("%d.%m.%Y %H.%M.%S")

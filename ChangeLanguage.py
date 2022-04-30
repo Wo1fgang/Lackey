@@ -8,6 +8,8 @@ from datetime import datetime
 import NewDocument
 import NewSpreadsheet
 import NewPresentation
+import csv
+import clicker
 
 # os.startfile("C:\\Program Files\\ONLYOFFICE\\DesktopEditors\\DesktopEditors.exe")  # Launching DesktopEditor
 # time.sleep(8)
@@ -17,6 +19,8 @@ project_folder = os.getcwd()
 pyautogui.PAUSE = 0.5
 
 date = datetime.now().strftime("%d.%m.%Y %H.%M.%S")  # date = Current date in "d.m.Y H.M.S" format
+
+test = os.path.basename(__file__)  # name of this script = variable "test". Used for easy reading the csv with results.
 
 languages = [
     "Belarusian",
@@ -55,17 +59,14 @@ languages = [
 
 
 def ChangeLang():
-    Buttons.tab()
-    Buttons.tab()
-    Buttons.tab()
+    for _ in range(3):
+        pyautogui.press('Tab')
     Buttons.down()
     if lang == "Chinese":
         pyautogui.typewrite('e')
     Buttons.enter()
-    Buttons.tab()
-    Buttons.tab()
-    Buttons.tab()
-    Buttons.tab()
+    for _ in range(4):
+        pyautogui.press('Tab')
     if os.name == "nt":
         Buttons.tab()
     Buttons.enter()
@@ -77,62 +78,66 @@ def CheckLanguage(languages):
     time.sleep(4)
     if (pyautogui.locateOnScreen(f'{project_folder}/Pattern/Languages/{languages}/CrDoc.png', confidence=0.9,
                                  grayscale=True)) is None:
-        f = open(f'{project_folder}/Completed Tests/Tests.txt', 'a')  # Open Tests.txt
-        f.write(
-            f"{date} - There's a problem with {languages} language in document \n")  # Write down that something's wrong
+        with open('Completed Tests.csv', 'a', newline='') as csvfile:  # Open "Completed Tests.csv"
+            writer = csv.writer(csvfile, delimiter=' ')
+            writer.writerow([f"{date}', {languages} Document, FAILED"])  # Write date, test and result
+        print(f"{date}', {languages} Document, FAILED")  # Print to console that something's wrong
     else:
         print(f'Everything is alright with {languages} language in document')
     pyautogui.hotkey('Ctrl', 'w')
+    clicker.click('MainMenu')
 
     # Creating Spreadsheet in {languages}
     NewSpreadsheet.CrtNewSpreadsheet()
     time.sleep(4)
     if (pyautogui.locateOnScreen(f'{project_folder}/Pattern/Languages/{languages}/CrSpr.png', confidence=0.9,
                                  grayscale=True)) is None:
-        f = open(f'{project_folder}/Completed Tests/Tests.txt', 'a')  # Open Tests.txt
-        f.write(
-            f"{date} - There's a problem with {languages} language in spreadsheet \n")  # Write down that something's wrong
+        with open('Completed Tests.csv', 'a', newline='') as csvfile:  # Open "Completed Tests.csv"
+            writer = csv.writer(csvfile, delimiter=' ')
+            writer.writerow([f"{date}',{languages} Spreadsheet, FAILED"])  # Write date, test and result
+        print(f"{date}', {languages} Spreadsheet, FAILED")  # Print to console that something's wrong
     else:
         print(f'Everything is alright with {languages} language in spreadsheet')
     pyautogui.hotkey('Ctrl', 'w')
+    clicker.click('MainMenu')
 
     # Creating Presentation in {languages}
     NewPresentation.CrtNewPresentation()
     time.sleep(4)
     if (pyautogui.locateOnScreen(f'{project_folder}/Pattern/Languages/{languages}/CrPre.png', confidence=0.9,
                                  grayscale=True)) is None:
-        f = open(f'{project_folder}/Completed Tests/Tests.txt', 'a')  # Open Tests.txt
-        f.write(f"{date} - There's a problem with {languages} language in presentation \n")  # Write down that something's wrong
+        with open('Completed Tests.csv', 'a', newline='') as csvfile:  # Open "Completed Tests.csv"
+            writer = csv.writer(csvfile, delimiter=' ')
+            writer.writerow([f"{date}',{languages} Presentation, FAILED"])  # Write date, test and result
+        print(f"{date}', {languages} Presentation, FAILED")  # Print to console that something's wrong
     else:
         print(f'Everything is alright with {languages} language in presentation')
     pyautogui.hotkey('Ctrl', 'w')
+    clicker.click('MainMenu')
 
     pyautogui.click(
         pyautogui.locateOnScreen(f'{project_folder}/Pattern/Languages/{languages}/Settings.png', confidence=0.9, grayscale=True))
     ChangeLang()
 
 
-# Checking and changing to Belarusian language
-if (pyautogui.locateOnScreen(f'{project_folder}/Pattern/Settings.png', confidence=0.9,
-                             grayscale=True)) is None:
-    pyautogui.click(pyautogui.locateOnScreen(f'{project_folder}/Pattern/MainMenu.png', confidence=0.9, grayscale=True))
-else:
-    pyautogui.click(pyautogui.locateOnScreen(f'{project_folder}/Pattern/Settings.png', confidence=0.9, grayscale=True))
-Buttons.tab()
-Buttons.tab()
-Buttons.tab()
-Buttons.down()
-pyautogui.typewrite('c')
-Buttons.up()
-Buttons.up()
-Buttons.enter()
-Buttons.tab()
-Buttons.tab()
-Buttons.tab()
-Buttons.tab()
-if os.name == "nt":
-    Buttons.tab()
-Buttons.enter()
+    # Checking and changing to Belarusian language
+    if (pyautogui.locateOnScreen(f'{project_folder}/Pattern/Settings.png', confidence=0.9,
+                                 grayscale=True)) is None:
+        pyautogui.click(pyautogui.locateOnScreen(f'{project_folder}/Pattern/MainMenu.png', confidence=0.9, grayscale=True))
+    else:
+        pyautogui.click(pyautogui.locateOnScreen(f'{project_folder}/Pattern/Settings.png', confidence=0.9, grayscale=True))
+    for _ in range(3):
+        pyautogui.press('Tab')
+    Buttons.down()
+    pyautogui.typewrite('c')
+    for _ in range(2):
+        pyautogui.press('up')
+    Buttons.enter()
+    for _ in range(4):
+        pyautogui.press('Tab')
+    if os.name == "nt":
+        Buttons.tab()
+    Buttons.enter()
 
 for lang in languages:
     CheckLanguage(lang)

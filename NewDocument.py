@@ -1,7 +1,7 @@
 import pyautogui
 import time
 import os
-import c
+import clicker
 import GoFullscreen
 import Change_Theme
 
@@ -16,10 +16,10 @@ project_folder = os.getcwd()
 
 def CrtNewDoc():
     if (pyautogui.locateOnScreen(f'{project_folder}/Pattern/NewDocument.png', confidence=0.9)) is None:
-        c.click('MainMenu')
-        c.click('NewDocument')
+        clicker.click('MainMenu')
+        clicker.click('NewDocument')
     else:
-        c.click('NewDocument')
+        clicker.click('NewDocument')
     time.sleep(4)
 
 

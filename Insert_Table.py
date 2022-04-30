@@ -3,7 +3,7 @@ import time
 from datetime import datetime  # Library used to get current time
 import Buttons  # Importing Buttons.py to quickly use necessary buttonpresses
 import os
-import c
+import clicker
 import csv
 import GoFullscreen
 import NewDocument
@@ -22,7 +22,7 @@ GoFullscreen.goFullScreen()
 def Insert_Table():  # defining function so we can import it into Everything.py
     NewDocument.CrtNewDoc()
     if pyautogui.click(pyautogui.locateOnScreen(f'{project_folder}/Pattern/Insert.png', confidence=0.9)) is None:
-        c.click('Insert2')
+        clicker.click('Insert2')
     pyautogui.press('alt')
     pyautogui.press('i')
     pyautogui.press('d')
@@ -46,16 +46,18 @@ def Insert_Table():  # defining function so we can import it into Everything.py
         with open('Completed Tests.csv', 'a', newline='') as csvfile:
             writer = csv.writer(csvfile, delimiter=' ')
             writer.writerow([f"{date}', {test}, FAILED"])
-        print("There's a problem with inserting 9x9 table")
+        print(f"{date}', {test}, FAILED")
     else:
         pyautogui.screenshot(f'{project_folder}/Completed Tests/Success/Image/URL/{date}.png')
         with open('Completed Tests.csv', 'a', newline='') as csvfile:
             writer = csv.writer(csvfile, delimiter=' ')
             writer.writerow([f"{date}, {test}, SUCCESS"])
+        print(f"{date}, {test}, SUCCESS")
 
     pyautogui.hotkey('Ctrl', 'w')
     Buttons.tab()
     Buttons.enter()
+
 
 if __name__ == "__main__":
     Insert_Table()

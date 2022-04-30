@@ -1,7 +1,7 @@
 import pyautogui
 import time
 import os
-import c
+import clicker
 import GoFullscreen
 import Change_Theme
 
@@ -16,10 +16,10 @@ project_folder = os.getcwd()
 
 def CrtNewSpreadsheet():
     if (pyautogui.locateOnScreen(f'{project_folder}/Pattern/NewSpreadsheet.png', confidence=0.9)) is None:
-        c.click('MainMenu')
-        c.click('NewSpreadsheet')
+        clicker.click('MainMenu')
+        clicker.click('NewSpreadsheet')
     else:
-        c.click('NewSpreadsheet')
+        clicker.click('NewSpreadsheet')
     time.sleep(4)
 
 
