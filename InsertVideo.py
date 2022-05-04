@@ -20,6 +20,7 @@ project_folder = os.getcwd()
 
 test = os.path.basename(__file__)
 
+day_of_test = datetime.now().strftime("%d.%m.%Y %H")
 
 def InsertVideo():
     NewPresentation.CrtNewPresentation()
@@ -40,15 +41,15 @@ def InsertVideo():
 
     if (pyautogui.locateOnScreen(f'{project_folder}/Pattern/CorrectVideo.png',
                                  confidence=0.9, grayscale=True)) is None:
-        pyautogui.screenshot(f'{project_folder}/Completed Tests/Failed/Image/Local/{date}.png')
-        with open('Completed Tests.csv', 'a', newline='') as csvfile:
+        with open(f'{project_folder}/Completed Tests/{day_of_test}.csv', 'a', newline='') as csvfile:  # Open "Completed Tests.csv"
             writer = csv.writer(csvfile, delimiter=' ')
-            writer.writerow([f"{date}', {test}, FAILED"])
-        print("There's a problem with inserting video")
-    else:
-        with open('Completed Tests.csv', 'a', newline='') as csvfile:
+            writer.writerow([f"{date}', {test}, FAILED"])  # Write date, test and result
+        print(f"{date}', {test}, FAILED") # Print to console that something's wrong
+    else:  # If everything's alright:
+        with open(f'{project_folder}/Completed Tests/{day_of_test}.csv', 'a', newline='') as csvfile:  # Open "Completed Tests.csv"
             writer = csv.writer(csvfile, delimiter=' ')
-            writer.writerow([f"{date}, {test}, SUCCESS"])
+            writer.writerow([f"{date}, {test}, SUCCESS"])  # Write date, test and result
+        print(f"{date}, {test}, SUCCESS")
 
 
 if __name__ == "__main__":

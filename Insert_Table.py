@@ -7,6 +7,9 @@ import clicker
 import csv
 import GoFullscreen
 import NewDocument
+import Change_Theme
+
+Change_Theme.ChangeThemeToLight()
 
 pyautogui.PAUSE = 0.5
 
@@ -18,6 +21,7 @@ test = os.path.basename(__file__)
 
 GoFullscreen.goFullScreen()
 
+day_of_test = datetime.now().strftime("%d.%m.%Y %H")
 
 def Insert_Table():  # defining function so we can import it into Everything.py
     NewDocument.CrtNewDoc()
@@ -42,16 +46,14 @@ def Insert_Table():  # defining function so we can import it into Everything.py
     date = datetime.now().strftime("%d.%m.%Y %H.%M.%S")  # date = Current date in "d.m.Y H.M.S" format
 
     if (pyautogui.locateOnScreen(f'{project_folder}/Pattern/CreatedTable.png', confidence=0.9, grayscale=True)) is None:
-        pyautogui.screenshot(f'{project_folder}/Completed Tests/Failed/Table/{date}.png')
-        with open('Completed Tests.csv', 'a', newline='') as csvfile:
+        with open(f'{project_folder}/Completed Tests/{day_of_test}.csv', 'a', newline='') as csvfile:  # Open "Completed Tests.csv"
             writer = csv.writer(csvfile, delimiter=' ')
-            writer.writerow([f"{date}', {test}, FAILED"])
-        print(f"{date}', {test}, FAILED")
-    else:
-        pyautogui.screenshot(f'{project_folder}/Completed Tests/Success/Image/URL/{date}.png')
-        with open('Completed Tests.csv', 'a', newline='') as csvfile:
+            writer.writerow([f"{date}', {test}, FAILED"])  # Write date, test and result
+        print(f"{date}', {test}, FAILED") # Print to console that something's wrong
+    else:  # If everything's alright:
+        with open(f'{project_folder}/Completed Tests/{day_of_test}.csv', 'a', newline='') as csvfile:  # Open "Completed Tests.csv"
             writer = csv.writer(csvfile, delimiter=' ')
-            writer.writerow([f"{date}, {test}, SUCCESS"])
+            writer.writerow([f"{date}, {test}, SUCCESS"])  # Write date, test and result
         print(f"{date}, {test}, SUCCESS")
 
     pyautogui.hotkey('Ctrl', 'w')

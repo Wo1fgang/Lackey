@@ -9,6 +9,9 @@ import csv  # Export results into csv
 import sys  # Interaction with scripts (in that case, sys.exit, to stop execution of script if something is wrong
 import GoFullscreen  # Script that enables full-screen on OO Editor, just in case
 import NewPresentation
+import Change_Theme
+
+Change_Theme.ChangeThemeToLight()
 
 test = os.path.basename(__file__)  # name of this script = variable "test". Used for easy reading the csv with results.
 
@@ -19,6 +22,8 @@ project_folder = os.getcwd()  # used in pointing where to look for screenshots a
 GoFullscreen.goFullScreen()  # fail-safe in case OO Editor is not in full-screen
 
 date = datetime.now().strftime("%d.%m.%Y %H.%M.%S")  # date = current date in form of dd.mm.yy hh.mm.ss
+
+day_of_test = datetime.now().strftime("%d.%m.%Y %H")
 
 
 def Insert_URL_Image_PRE():  # creating function
@@ -55,12 +60,14 @@ def Insert_URL_Image_PRE():  # creating function
             pyautogui.screenshot(f'{project_folder}/Completed Tests/Failed/Image/URL/{date}.png')
             # Screenshot to see what's wrong
 
-            with open('Completed Tests.csv', 'a', newline='') as csvfile:  # Open "Completed Tests.csv"
+            with open(f'{project_folder}/Completed Tests/{day_of_test}.csv', 'a',
+                      newline='') as csvfile:  # Open "Completed Tests.csv"
                 writer = csv.writer(csvfile, delimiter=' ')
                 writer.writerow([f"{date}', {test}, FAILED"])  # Write date, test and result
             print(f"{date}', {test}, FAILED")  # Print to console that something's wrong
         else:  # If everything's alright:
-            with open('Completed Tests.csv', 'a', newline='') as csvfile:  # Open "Completed Tests.csv"
+            with open(f'{project_folder}/Completed Tests/{day_of_test}.csv', 'a',
+                      newline='') as csvfile:  # Open "Completed Tests.csv"
                 writer = csv.writer(csvfile, delimiter=' ')
                 writer.writerow([f"{date}, {test}, SUCCESS"])  # Write date, test and result
             print(f"{date}, {test}, SUCCESS")

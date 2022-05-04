@@ -6,6 +6,9 @@ from NewDocument import CrtNewDoc
 from Insert_Tab import InsertTab
 import Buttons
 from datetime import datetime
+import Change_Theme
+
+Change_Theme.ChangeThemeToLight()
 
 date = datetime.now().strftime("%d.%m.%Y %H.%M.%S")
 
@@ -14,6 +17,9 @@ os.startfile("C:\\Program Files\\ONLYOFFICE\\DesktopEditors\\DesktopEditors.exe"
 #time.sleep(7)
 
 project_folder = os.getcwd()
+
+day_of_test = datetime.now().strftime("%d.%m.%Y %H")
+
 
 def next():
     Buttons.escape()

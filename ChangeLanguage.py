@@ -1,8 +1,6 @@
-import sys
 import pyautogui
 import os
 import Buttons
-import pyperclip
 import time
 from datetime import datetime
 import NewDocument
@@ -10,6 +8,12 @@ import NewSpreadsheet
 import NewPresentation
 import csv
 import clicker
+import Change_Theme
+import GoFullscreen
+
+Change_Theme.ChangeThemeToLight()
+
+GoFullscreen.goFullScreen()
 
 # os.startfile("C:\\Program Files\\ONLYOFFICE\\DesktopEditors\\DesktopEditors.exe")  # Launching DesktopEditor
 # time.sleep(8)
@@ -21,6 +25,8 @@ pyautogui.PAUSE = 0.5
 date = datetime.now().strftime("%d.%m.%Y %H.%M.%S")  # date = Current date in "d.m.Y H.M.S" format
 
 test = os.path.basename(__file__)  # name of this script = variable "test". Used for easy reading the csv with results.
+
+day_of_test = datetime.now().strftime("%d.%m.%Y %H")
 
 languages = [
     "Belarusian",

@@ -8,6 +8,9 @@ import GoFullscreen
 import clicker
 import csv
 import NewDocument
+import Change_Theme
+
+Change_Theme.ChangeThemeToLight()
 
 GoFullscreen.goFullScreen()
 
@@ -32,6 +35,7 @@ Formats = ["jpg.jpg",
 
 date = datetime.now().strftime("%d.%m.%Y %H.%M.%S")
 
+day_of_test = datetime.now().strftime("%d.%m.%Y %H")
 
 def Insert_Local_Image():
     # Local - Insert tab + Insert Local Image
@@ -56,16 +60,17 @@ def Insert_Local_Image():
 
         if (pyautogui.locateOnScreen(f'{project_folder}/Pattern/Images/small images/{localimage}',
                                      confidence=0.9, grayscale=True)) is None:
-            pyautogui.screenshot(f'{project_folder}/Completed Tests/Failed/Image/Local/{date}.png')
-            with open('Completed Tests.csv', 'a', newline='') as csvfile:
+            with open(f'{project_folder}/Completed Tests/{day_of_test}.csv', 'a',
+                      newline='') as csvfile:  # Open "Completed Tests.csv"
                 writer = csv.writer(csvfile, delimiter=' ')
-                writer.writerow([f"{date}',{test} {localimage}, FAILED"])
-            print(f"{date}',{test} {localimage}, FAILED")
-        else:
-            with open('Completed Tests.csv', 'a', newline='') as csvfile:
+                writer.writerow([f"{date}', {test}, FAILED"])  # Write date, test and result
+            print(f"{date}', {test}, FAILED")  # Print to console that something's wrong
+        else:  # If everything's alright:
+            with open(f'{project_folder}/Completed Tests/{day_of_test}.csv', 'a',
+                      newline='') as csvfile:  # Open "Completed Tests.csv"
                 writer = csv.writer(csvfile, delimiter=' ')
-                writer.writerow([f"{date},{test} {localimage}, SUCCESS"])
-            print(f"{date},{test} {localimage}, SUCCESS")
+                writer.writerow([f"{date}, {test}, SUCCESS"])  # Write date, test and result
+            print(f"{date}, {test}, SUCCESS")
 
         pyautogui.hotkey('Ctrl', 'w')
         Buttons.tab()
